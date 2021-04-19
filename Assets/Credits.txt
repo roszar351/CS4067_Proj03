@@ -1,0 +1,37 @@
+** CREDITS FOR ASSETS **
+
+Harlow-audio(library for easier playing of sounds/music in the twine harlow story format) - https://github.com/ChapelR/harlowe-audio
+
+Graphics:
+inst ka.missa + vk v.zalepaev - ka_missa and Vadim Zalepaev, https://machaon-maackii.itch.io/dark-forest-backgrounds 
+
+lakeside_1920x1080 - Sigelus, https://sigelus.itch.io/visual-novel-backgrounds-lakeside
+The dawn - saukgp, https://saurabhkgp.itch.io/the-dawn-parallax-background
+
+Audio/Music:
+mysteryOfDarkForest - Amadeusz Bartos, https://freesound.org/people/ipodpierwsza/sounds/333436/
+
+mysteriousPiano - Migfus20, https://freesound.org/people/Migfus20/sounds/559853/
+
+mysteriousBackgroundOrchestra - Migfus20, https://freesound.org/people/Migfus20/sounds/560444/
+
+mysteriousEvent - Xanco123, https://freesound.org/people/Xanco123/sounds/331375/
+
+
+
+Audio/Sounds:
+kenney_digitalaudio - kenney.nl, https://kenney.nl/assets
+
+kenney_impactsounds - kenney.nl, https://kenney.nl/assets
+
+kenney_rpgaudio - kenney.nl, https://kenney.nl/assets
+
+fallingTree - Kinoton, https://freesound.org/people/Kinoton/sounds/494071/
+
+scream.wav - alexaxy, https://freesound.org/people/alexaxy/sounds/278177/
+
+magicExplosion.wav - Bertsz, https://freesound.org/people/Bertsz/sounds/500904/
+
+loudNoise.wav - nekoninja, https://freesound.org/people/nekoninja/sounds/370203/
+
+fire.wav - Krisboruff, https://freesound.org/people/Krisboruff/sounds/17742/
