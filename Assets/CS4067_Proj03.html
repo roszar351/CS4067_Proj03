@@ -27,24 +27,24 @@
 Welcome!
 }
 You can change sound volume by expanding the panel on the left.
-[[Begin Story!-&gt;Act 1]]</tw-passagedata><tw-passagedata pid="2" name="Background1" tags="Intro" position="264,180" size="100,100">{
-(set: $aggression to 0)
+[[Begin Story!-&gt;Background1]]</tw-passagedata><tw-passagedata pid="2" name="Background1" tags="Intro" position="128,180" size="100,100">{
+(set: $agression to 0)
 Fifteen years ago, a mysterious event struck these lands known as &#39;The Awakening&#39;. After this event a large part of the world&#39;s population gained access to powers that were dormant inside of them. 
 People quickly became power hungry and started wars with each other, using their new found powers to defeat anyone in their path and take over control. One person in particular, known as the Mayor has been very successful in taking lands from all of his enemies. Thanks to his power he drains other peoples&#39; powers to strengthen himself, and is using his power to slowly seize control of the whole world.
 }
-[[Continue-&gt;Background2]]</tw-passagedata><tw-passagedata pid="3" name="Background2" tags="Intro" position="387,178" size="100,100">As the Mayor gained more and more control, he started to capture anyone with powers. Not all people were power hungry, there is a group of people with powers that decided to hide them and try to live a simple life, including you. Everything was going fine, until one day you saw a villager about to be crushed by a tree. You decided to save him by using your powers. 
+[[Continue-&gt;Background2]]</tw-passagedata><tw-passagedata pid="3" name="Background2" tags="Intro" position="253,177" size="100,100">As the Mayor gained more and more control, he started to capture anyone with powers. Not all people were power hungry, there is a group of people with powers that decided to hide them and try to live a simple life, including you. Everything was going fine, until one day you saw a villager about to be crushed by a tree. You decided to save him by using your powers. 
 (click-append:&quot;your powers.&quot;)[(unless: (track: &#39;fallingTree&#39;, &#39;isplaying&#39;))[(track: &#39;fallingTree&#39;, &#39;play&#39;)] While the person was grateful for saving their life, you could sense that your simple life was about to change.
-[[Continue-&gt;Background3]]]</tw-passagedata><tw-passagedata pid="4" name="Background3" tags="Intro" position="512,177" size="100,100">It wasn&#39;t going to be long before Mayor&#39;s execution squad showed up and forcefuly searched the village for the source of the power they sensed because of you. 
+[[Continue-&gt;Background3]]]</tw-passagedata><tw-passagedata pid="4" name="Background3" tags="Intro" position="378,176" size="100,100">It wasn&#39;t going to be long before Mayor&#39;s execution squad showed up and forcefuly searched the village for the source of the power they sensed because of you. 
 You did try to warn the villagers not to stay as the squad is known to use any means they deem necessary to get what they want but they didn&#39;t want to abandon their home. You had to run, taking only the most valuable items and headed south.
-[[Continue-&gt;Background4]]</tw-passagedata><tw-passagedata pid="5" name="Background4" tags="Intro" position="637,179" size="100,100">You kept running, but it didn&#39;t take long for the execution squad to catch up. They are formed of some of the best hunters found in these lands. 
+[[Continue-&gt;Background4]]</tw-passagedata><tw-passagedata pid="5" name="Background4" tags="Intro" position="503,178" size="100,100">You kept running, but it didn&#39;t take long for the execution squad to catch up. They are formed of some of the best hunters found in these lands. 
 You were outnumbered, quickly overwhelmed you and put you in chains, they also placed a strange collar on your neck that prevented you from using your powers.
 (unless: (track: &#39;fireNoise&#39;, &#39;isplaying&#39;))[(track: &#39;fireNoise&#39;, &#39;loop&#39;, true) (track: &#39;fireNoise&#39;, &#39;play&#39;)] They dragged you through the village or at least what was left of it, everything was on fire, some of the people were in chains and others were dead in the streets. This was just another village that was used as an example of what happens to people that resist the Mayor&#39;s authority over these lands.
-[[Continue-&gt;CurrentSituation]]</tw-passagedata><tw-passagedata pid="6" name="Act1 Node1 Start" tags="Act1" position="887,182" size="100,100">{
+[[Continue-&gt;CurrentSituation]]</tw-passagedata><tw-passagedata pid="6" name="Act1 Node1 Start" tags="Act1" position="753,181" size="100,100">{
 (track: &#39;loudNoise&#39;, &#39;play&#39;)
 You get awakened by loud noises and see guards frantically running towards where the torture chambers are located. Listen closer
 }
 (click-replace: &quot;Listen closer&quot;)[(unless: (track: &#39;magicExplosion&#39;, &#39;isplaying&#39;))[(track: &#39;magicExplosion&#39;, &#39;play&#39;)] You see a bright glow followed by a loud explosion sound and people screaming. 
-[[It&#39;s time to do something.-&gt;Act1 Node2]]]</tw-passagedata><tw-passagedata pid="7" name="Act1 Node2" tags="Act1" position="884,301" size="100,100">{
+[[It&#39;s time to do something.-&gt;Act1 Node2]]]</tw-passagedata><tw-passagedata pid="7" name="Act1 Node2" tags="Act1" position="751,300" size="100,100">{
 (set: $act1Node2Choice to -1)
 It seems the guards are distracted, you should be able to escape this place.
 }
@@ -53,27 +53,27 @@ Leave your cell
 [[Try to sneak around him.-&gt;Act1 Node3 SneakResult]]
 [[Try to charm him-&gt;Act1 Node3 CharmResult]]
 [[Try to force your way past him-&gt;Act1 Node3 ForceResult]]]
-</tw-passagedata><tw-passagedata pid="8" name="Act1 Node3 SneakResult" tags="Act1" position="736,422" size="100,100">{
+</tw-passagedata><tw-passagedata pid="8" name="Act1 Node3 SneakResult" tags="Act1" position="602,421" size="100,100">{
 (set: $act1Node2Choice to 0)
 All the guards are too distracted with the fight that broke out in the torture chambers. You easily sneak past the one guard left at the exit.
 }
-[[Escape the prison-&gt;Act1 Node4]]</tw-passagedata><tw-passagedata pid="9" name="Act1 Node3 CharmResult" tags="Act1" position="886,422" size="100,100">{
+[[Escape the prison-&gt;Act1 Node4]]</tw-passagedata><tw-passagedata pid="9" name="Act1 Node3 CharmResult" tags="Act1" position="751,421" size="100,100">{
 (set: $act1Node2Choice to 1)
 You try to charm the guard to let you go but he quickly knocks you down and tells you not to move.
 }
 Your hear someone screaming and running towards you and the guard.
 (click-append: &quot;Your hear someone screaming and running towards you and the guard.&quot;)[(unless: (track: &#39;screaming&#39;, &#39;isplaying&#39;))[(track: &#39;screaming&#39;, &#39;play&#39;)] 
-You notice the person is on fire, screaming from the pain. He blindly runs into the guard knocking him down. This is your chance to [[escape.-&gt;Act1 Node4]]]</tw-passagedata><tw-passagedata pid="10" name="Act1 Node3 ForceResult" tags="Act1" position="1036,421" size="100,100">{
-(set: $aggression to $aggression + 1)
+You notice the person is on fire, screaming from the pain. He blindly runs into the guard knocking him down. This is your chance to [[escape.-&gt;Act1 Node4]]]</tw-passagedata><tw-passagedata pid="10" name="Act1 Node3 ForceResult" tags="Act1" position="902,420" size="100,100">{
+(set: $agression to $agression + 1)
 (set: $act1Node2Choice to 2)
 The guard has his back towards you.
 }
 {
 This is your chance for a suprise attack! 
 (click-append: &quot;suprise attack!&quot;)[(unless: (track: &#39;supriseAttackNoise&#39;, &#39;isplaying&#39;))[(track: &#39;supriseAttackNoise&#39;, &#39;play&#39;)] You knock the guard out, and proceed to [[escape the prison.-&gt;Act1 Node4]]]
-}</tw-passagedata><tw-passagedata pid="11" name="Act1 Node4" tags="Act1" position="888,550" size="100,100">You escaped the prison but you can&#39;t just stop and celebrate. You need to find some way to remove the collar and come up with a plan to defeat the Mayor. 
+}</tw-passagedata><tw-passagedata pid="11" name="Act1 Node4" tags="Act1" position="754,549" size="100,100">You escaped the prison but you can&#39;t just stop and celebrate. You need to find some way to remove the collar and come up with a plan to defeat the Mayor. 
 Your village has been burned down, but you remember that there is another village not too far, you heard rumors about an elder that lives in that village and has helped power users before.
-[[Head to the vilalge-&gt;Act1 Node5]]</tw-passagedata><tw-passagedata pid="12" name="Act1 Node5" tags="Act1" position="885,675" size="100,100">You reached the village, people quickly notice the collar around your neck, giving you weird looks. You won&#39;t have much time before someone notifies the execution squad.
+[[Head to the vilalge-&gt;Act1 Node5]]</tw-passagedata><tw-passagedata pid="12" name="Act1 Node5" tags="Act1" position="752,674" size="100,100">You reached the village, people quickly notice the collar around your neck, giving you weird looks. You won&#39;t have much time before someone notifies the execution squad.
 Try to find the elder
 (click-replace: &quot;Try to find the elder&quot;)[You ask people about the elder, some people tell you to go away before you ruin their lives others that answer don&#39;t know anything about such elder. Suddenly someone grabs your shoulder and drags you into an alley. 
 Try to fight back]
@@ -82,40 +82,32 @@ Try to fight back]
 [[Answer politely, telling the man about yourself, how you escaped the prison and that you are looking for help from the elder-&gt;Act1 Node6 Friendly]]
 [[Answer politely, hiding ehe details about youself, how you escaped and about the elder-&gt;Act1 Node6 Neutral]]
 [[Answer agressively, demanding the man to let you go-&gt;Act1 Node6 Agressive]]
-] </tw-passagedata><tw-passagedata pid="13" name="CurrentSituation" tags="" position="761,180" size="100,100">{
+] </tw-passagedata><tw-passagedata pid="13" name="CurrentSituation" tags="" position="627,179" size="100,100">{
 (if: (track: &#39;fireNoise&#39;, &#39;isplaying&#39;))[
     (track:&#39;fireNoise&#39;, &#39;stop&#39;)
 ]
 You ended up in one of many prisons set up by the Mayor, this one happened to be very close to your old village. The conditions are horrible and people that have been here for a some time are in terrible state, some barely hanging onto their life. 
 }
 You always had hatred towards the power-mad Mayor, but seeing all these people held against their will, tortured, used by the Mayor for more power, it disgusted you. Something had to be done about this.
-[[Continue-&gt;Act1 Node1 Start]]</tw-passagedata><tw-passagedata pid="14" name="Act1 Node6 Friendly" tags="" position="738,802" size="100,100">After hearing you story, the stranger tells you that he is the elder. He tells you that he is a a power user that has hid for many years now and tries to help people in need, and removes your collar. He also admires your intent to fight back for the people. 
+[[Continue-&gt;Act1 Node1 Start]]</tw-passagedata><tw-passagedata pid="14" name="Act1 Node6 Friendly" tags="" position="603,799" size="100,100">After hearing you story, the stranger tells you that he is the elder. He tells you that he is a a power user that has hid for many years now and tries to help people in need, and removes your collar. He also admires your intent to fight back for the people. 
 &quot;The Mayor is growing in power with each day, soon enough no one will be able to stop him. He sends his execution squads on these witch hunts to gather up the rest of the power users.&quot; The Elder explains.
 &quot;But I think you might have the fighting spirit and with the right training the power to challenge him. I&#39;ll give you a minute to rest, then we will discuss how you can gain power to challenge the mayor.&quot;.
-[[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="15" name="Act1 Node6 Neutral" tags="" position="887,801" size="100,100">After hearing you story, the stranger tells you that he thinks you are hiding something but he understands as he is the elder. He tells you that he is a a power user that has hid for many years now and tries to help people in need, and removes your collar. He also admires your intent to fight back for the people. 
+[[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="15" name="Act1 Node6 Neutral" tags="" position="753,800" size="100,100">After hearing you story, the stranger tells you that he thinks you are hiding something but he understands as he is the elder. He tells you that he is a a power user that has hid for many years now and tries to help people in need, and removes your collar. He also admires your intent to fight back for the people. 
 &quot;The Mayor is growing in power with each day, soon enough no one will be able to stop him. He sends his execution squads on these witch hunts to gather up the rest of the power users.&quot; The Elder explains.
 &quot;But I think you might have the fighting spirit and with the right training the power to challenge him. I&#39;ll give you a minute to rest, then we will discuss how you can gain power to challenge the mayor.&quot;.
-[[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="16" name="Act1 Node6 Agressive" tags="" position="1037,802" size="100,100">{
-(set: $aggression to $aggression + 1)
+[[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="16" name="Act1 Node6 Agressive" tags="" position="903,800" size="100,100">{
+(set: $agression to $agression + 1)
 The stranger tells you to calm down, telling you that he heard you asking about the elder and explains that he is the elder. He will remove your collar as he understands your situation. You thank him and explain that you want revenge on the mayor.
 }
 &quot;The Mayor is growing in power with each day, soon enough no one will be able to stop him. He sends his execution squads on these witch hunts to gather up the rest of the power users.&quot; The Elder explains.
 &quot;But I think you might have the fighting spirit and with the right training the power to challenge him. I&#39;ll give you a minute to rest, then we will discuss how you can gain power to challenge the mayor.&quot;.
-[[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="17" name="Act1 Final Node" tags="" position="890,927" size="100,100">{
+[[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="17" name="Act1 Final Node" tags="" position="755,926" size="100,100">{
 (set: $firstMaster to -1)
 (set: $secondMaster to -1)
-The elder tells you about four masters that are able to train you in how to effectively use your power. He also reminds you that that the Mayor is growing in power and time is running out. You must seek out a master as quickly as possible.
+The elder tells you about four masters that are able to train you in how to effectively use your power. He also reminds you that that the Mayor is growing in power and time is running out. You have to decide quickly which master to go to first.
 }
-[[Look at the map and set off on your journey-&gt;Act 2]]</tw-passagedata><tw-passagedata pid="18" name="Act2 The Map" tags="" position="897,1196" size="100,100">Player comes back here when they have to decide which master to go to, i.e. from act 1 and also when u finish training with one of the masters u will come back here.
-Make sure to set the &#39;$firstMaster&#39; and &#39;$secondMaster&#39; when player goes for training i.e. u can use an if statemtn to check if &#39;$firstMaster&#39; is -1 if yes then set that master to the choice made by the player else set &#39;$secondMaster&#39; to the choice, if both are set then we proceed with the story(unless there are changes done where the player can visit more than 2 masters)
-
-Its been 5 days since I set off from the Elder. I must keep going, I must defeat the Mayor.
-The crossroads for the masters is approaching, which path will guide me to learn about my true potential.
-
-[[Train in the way of the flame.-&gt;Fire Training]]
-[[Train in the depths of the water.-&gt;Water Training]]
-[[Train in the underground, with earth, there is no limit.-&gt;Earth Training]]
-[[Train in the sky, controlling the currents around you.-&gt;Air Training]]</tw-passagedata><tw-passagedata pid="19" name="hal.tracks" tags="" position="357,19" size="100,100">mainMusic: ./Assets/Audio/Music/mysteriousPiano.mp3
+[[Look at the map-&gt;Act2 The Map]]</tw-passagedata><tw-passagedata pid="18" name="Act2 The Map" tags="" position="755,1076" size="100,100">Player comes back here when they have to decide which master to go to, i.e. from act 1 and also when u finish training with one of the masters u will come back here.
+Make sure to set the &#39;$firstMaster&#39; and &#39;$secondMaster&#39; when player goes for training i.e. u can use an if statemtn to check if &#39;$firstMaster&#39; is -1 if yes then set that master to the choice made by the player else set &#39;$secondMaster&#39; to the choice, if both are set then we proceed with the story(unless there are changes done where the player can visit more than 2 masters)</tw-passagedata><tw-passagedata pid="19" name="hal.tracks" tags="" position="357,19" size="100,100">mainMusic: ./Assets/Audio/Music/mysteriousPiano.mp3
 musicTwo: ./Assets/Audio/Music/mysteriousBackgroundOrchestra.mp3
 musicThree: ./Assets/Audio/Music/mysteriousEvent.mp3
 musicFour: ./Assets/Audio/Music/mysteryOfDarkForest.mp3
@@ -124,241 +116,7 @@ screaming: ./Assets/Audio/Sounds/scream.wav
 magicExplosion: ./Assets/Audio/Sounds/magicExplosion.wav
 loudNoise: ./Assets/Audio/Sounds/loudNoise.wav
 fireNoise: ./Assets/Audio/Sounds/fire.wav
-supriseAttackNoise: ./Assets/Audio/Sounds/kenney_impactsounds/impactPlate_heavy_004.ogg</tw-passagedata><tw-passagedata pid="20" name="Act 2" tags="" position="897,1066" size="100,100">(live: 2s)[(goto: &quot;Act2 The Map&quot;)]
-
-
-=&gt;&lt;=
-#Act 2</tw-passagedata><tw-passagedata pid="21" name="Act 1" tags="" position="136,180" size="100,100">(live: 2s)[(goto: &quot;Background1&quot;)]
-
-=&gt;&lt;=
-#Act 1</tw-passagedata><tw-passagedata pid="22" name="Fire Training" tags="" position="700,1345" size="100,100">The path to the fire master is long and treacherous, you arrive at the base of a volcano, there are vents all around you, releasing sulphurous fumes. Its hard to breath but you must keep going. 
-Continue.
-
-(click-replace: &quot;Continue.&quot;)[The cracks in the ground being to separate, a totem raises from the earth in front of you. You step back as it speaks. Continue.]
-
-(click-replace: &quot;Continue.&quot;)[I know why you are here child, but are you worthy?. 
-Yes I&#39;m worthy.]
-
-(click-replace: &quot;Yes I&#39;m worthy.&quot;)[[The training will most likely kill you, let&#39;s see what you&#39;re made of.-&gt;train the fire element]]
-</tw-passagedata><tw-passagedata pid="23" name="Water Training" tags="" position="840,1342" size="100,100">You travel by the nearby river. It goes for so long that it later becomes a spring and leads you to the source.
-Continue.
-(click-replace: &quot;Continue.&quot;)[
-When you reach the source the water circles the ground around you and you notice that on top of the rock from underneath which spring starts there is a totem.
-This totem suddenly speaks to you.
-Continue.
-]
-(click-replace: &quot;Continue.&quot;)[ - Welcome traveler, I can sense you are strong with the powers, but more training wouldn&#39;t harm. 
- - The flow of the water, the dripple of sky, tell me would you like to know how?
-[[proceed-&gt;train the water element]]
-]
-</tw-passagedata><tw-passagedata pid="24" name="Earth Training" tags="" position="979,1343" size="100,100">You head to the northern hills. The ground becomes dry and filled with rocks. You see the cave, hopefully the same one as the elder said.
-Continue.
-(click-replace: &quot;Continue.&quot;)[You enter the cave and find a hollow area in it. Once you stepped on the level ground it cracks, and all surroundings start to shake. The largest satalacite cracks during the process and you notice a face forming in it.
-Continue.]
-(click-replace: &quot;Continue.&quot;)[ - Welcome traveler, I feel your strenght from the stomping of your feet, are you here to train?
-[[Yes-&gt;train the earth element]]]
-
- </tw-passagedata><tw-passagedata pid="25" name="Air Training" tags="" position="1124,1342" size="100,100">You head east towards the forest of winds. The elder said to look for an empty area surrounded by trees, trees like no other. Older, wiser, that have seen the raises and falls of times.
-Continue.
- (click-replace: &quot;Continue.&quot;)[After wandering in the forest for days, you reach the center of the forest enclosed by the elder trees. You stand in the middle of the area and a breeze touches your face. The breeze becomes stronger and suddenly you can barely stand on your feet.
- Continue.]
-  (click-replace: &quot;Continue.&quot;)[Through the hum of the wind you can hear a voice, very melodic voice, or more like a melodic whisper
- - Welcome traveler, have you come to catch some air?
- - If you&#39;d like Ill teach you how to grab and throw the force of the wind, all you need is patience.
- [[Continue-&gt;train the air element]]]
-</tw-passagedata><tw-passagedata pid="26" name="train the fire element" tags="" position="692,1483" size="100,100">The earth shakes beneath your feet, cracking open, target dummies begin to surface.
-
-Stand with your feet apart, feel the temperature of your body rise. Continue.
-(click-replace: &quot;Continue.&quot;)[
-Good. Now feel it build up from your core, direct it towards your hands. Release!]
-(click-replace: &quot;Release!&quot;)[
-A fireball shoots from the palm of your hand and hits the target dummy in the chest.
-Ingulfing it in flames. Continue.]
-
-(click-replace: &quot;Continue.&quot;)[
-
-Not bad.
-
-You like this feeling and spend the rest of the day practicing this technique.
-
-[[Continue-&gt;Finish fire training]]                                                      </tw-passagedata><tw-passagedata pid="27" name="Finish fire training" tags="" position="698,1633" size="100,100">You&#39;ve proven to be worthy. You should continue your journey from here and seek out another master.
-
-Set off on your journey to find the next master. Where to go?
-(click-replace: &quot;Where to go?&quot;)[
-[[Water Master -&gt; tavern on the way]]
-[[Earth Master -&gt; tavern on the way]]
-[[Air Master -&gt; tavern on the way]]
-]</tw-passagedata><tw-passagedata pid="28" name=" tavern on the way" tags="" position="905,1822" size="100,100">You come across a Tavern on your journey, you are tired and could do with resting for a while.
-Enter the Tavern
-{(set: $drink to -1)
-(set: $random to (a: 1, 2, 3))}
-(click-replace: &quot;Enter the Tavern&quot;)[
-You enter the tavern and take a look around.
-The place is quite desolate, not many people are there.
-The few locals seem stressed and depressed.
-
-You order a drink and sit down at a table in the corner, away from the light.
-
-(link: &quot;Drink&quot;)[
-	(set: $drink to 1)
-	(go-to: &quot;Drinking&quot;)
-]
-[[Listen to the locals-&gt;Listen to locals]]
-[[Leave the tavern-&gt;Path outside Tavern]]
-]</tw-passagedata><tw-passagedata pid="29" name="train the water element" tags="" position="838,1485" size="100,100">After proceeding, the water raises producing target dummies and the training begins.
-The aim is to manage controlling the water to conjure protective shields and manipulate it to disarm enemies.
-Continue.
-(click-replace: &quot;Continue.&quot;)[After 3 days have passed you prove to be a worthy water conjurer and the totem speaks again.
- - You are now ready to become one with the water flows and other sources of power you shall seek.
-[[Continue-&gt;Finish water training]]]
-</tw-passagedata><tw-passagedata pid="30" name="Finish water training" tags="" position="844,1632" size="100,100">You can now proceed to further training. Lets check what&#39;s next on the map given by the elder.
-
-Set off on your journey to find the next master. Where to go?
-(click-replace: &quot;Where to go?&quot;)[
-[[Fire Master -&gt; tavern on the way]]
-[[Earth Master -&gt; tavern on the way]]
-[[Air Master -&gt; tavern on the way]]
-]</tw-passagedata><tw-passagedata pid="31" name="train the earth element" tags="" position="979,1481" size="100,100">This training initially tests the agility from many rocks falling your way. Later you learn on how to manipulate rocks and earth to produce throwing knives out of them and you practice at the nearby rock structures 
-(or stalactites and stalagmites).
-Continue.
-(click-replace: &quot;Continue.&quot;)[After an exausting day the totem stumbles and falls apart while producing its final words that echo through the cave
- - continue your journey, find the next master
- [[Continue-&gt;Finish earth training]]]
-</tw-passagedata><tw-passagedata pid="32" name="Finish earth training" tags="" position="982,1632" size="100,100">You must go forth and find another master to train with.
-
-Set off on your journey. Where to go?
-(click-replace: &quot;Where to go?&quot;)[
-[[Water Master -&gt; tavern on the way]]
-[[Fire Master -&gt; tavern on the way]]
-[[Air Master -&gt; tavern on the way]]
-]</tw-passagedata><tw-passagedata pid="33" name="train the air element" tags="" position="1122,1486" size="100,100">The voice gives advises you to kneel on the ground and give yourself up to the winds.
-Continue.
- (click-replace: &quot;Continue.&quot;)[
-After several days of meditation you can feel under your skin how the air fills in your bones, veins and surrounds your body.
-Continue.
-]
- (click-replace: &quot;Continue.&quot;)[
-  - Proceed with your journey - the voice says - you are ready to be lifted by the air. 
- [[Continue-&gt;Finish air training]]] 
-</tw-passagedata><tw-passagedata pid="34" name="Finish air training" tags="" position="1127,1631" size="100,100">You can now proceed to further training. Lets check what&#39;s next on the map given by the elder.
-
-Set off on your journey to find the next master. Where to go?
-(click-replace: &quot;Where to go?&quot;)[
-[[Water Master -&gt; tavern on the way]]
-[[Earth Master -&gt; tavern on the way]]
-[[Fire Master -&gt; tavern on the way]]
-]</tw-passagedata><tw-passagedata pid="35" name="Drinking" tags="" position="705,1842" size="100,100">(link: &quot;Drink&quot;)[
-	(set: $drink to it + 1)
-	(go-to: &quot;Drinking&quot;)
-]
-
-Your drink value is $drink.
-
-(if: $drink is 5)[
-	(goto: &quot;T&quot;)
-	(set: $aggression to 5)
-]
-[[Leave-&gt;Path outside Tavern]]</tw-passagedata><tw-passagedata pid="36" name="Path outside Tavern" tags="" position="912,2003" size="100,100">Walking down the street, you see soldiers beating up a peasant.
-
-(if: $aggression &gt; 4)[
-	You stampede towards then, throwing &quot;variable&quot; blasts at them killing them instantly. Your aggression injures the peasant.
-Continue.
-]
-(else:)[
-You engage the soldiers, saving the peasant.
-Continue.
-]
-
-(click-replace: &quot;Continue.&quot;)[You raise your eyes, as the liberation of the country is about to begin. You realise that you can win a battle and are stronger than you think.
-[[Back to Tavern-&gt;Back to Tavern]]
-]</tw-passagedata><tw-passagedata pid="37" name="T" tags="" position="705,1965" size="100,100">You&#39;ve had a lot to drink.
-
-You feel wiery as you get up and walk out the door
-
-(live: 4s)[(goto: &quot;Path outside Tavern&quot;)]
-
-
-=&gt;&lt;=</tw-passagedata><tw-passagedata pid="38" name="Listen to locals" tags="" position="1108,1826" size="100,100">{
-(if: $random&#39;s length is 0)[
-	There are no more choices left!
-	It&#39;s getting late, its time to leave.
-	(set: $choice to -1)
-	(link: &quot;Secret Message&quot;)[(goto: &quot;Secret pathway discovered&quot;)]
-	
-]
-(else:)[
-(set: $choice to (either: ...$random))
-]
-
-(if: $choice is 1)[Here is where the content of the choice is, including the link to the next passage.
-(set: $random to it - (a: 1))
-]
-
-(elseif: $choice is 2)[Here is where the content of the choice is, including the link to the next passage.
-(set: $random to it - (a: 2))
-]
-(elseif: $choice is 3)[Here is where the content of the choice is, including the link to the next passage.
-(set: $random to it - (a: 3))
-]
-}
-{
-(if: $choice is not -1)[
-
-(link: &quot;Listen&quot;)[(goto: &quot;Listen to locals&quot;)(set: $random to it - 1)]
-
-]
-
-}
-[[Leave-&gt;Path outside Tavern]]</tw-passagedata><tw-passagedata pid="39" name="Back to Tavern" tags="" position="909,2157" size="100,100">After the battle withe these soldiers, our hero is shocked to discover that the pesants and tavern customers are not happy with him. He naively presumed that they would be happy and view him as a hero but instead they are quite pissed off as he has just created a world of trouble for them. The travellers that he &quot;rescued&quot; are also not happy, they know that there will be more soldiers at the tavern soon as a result of the murders. Our hero is taken aback by this development, he is starting to learn that the world is a cruel place full of cowards and bullies.
-
-[[Head towards the city-&gt;Head towards city]]</tw-passagedata><tw-passagedata pid="40" name="Secret pathway discovered" tags="" position="1302,2000" size="100,100">You learn about this from the dialogue from the locals.
-Sewage? 
-Rat infested? 
-Maybe that&#39;s why no guards are guarding it
-
-Secret entrance to the castle
-</tw-passagedata><tw-passagedata pid="41" name="Head towards city" tags="" position="906,2300" size="100,100">=&gt;&lt;=
-You follow the road towards the city gates
-(live: 5s)[(goto: &quot;Arrival at city gates&quot;)]</tw-passagedata><tw-passagedata pid="42" name="Arrival at city gates" tags="" position="908,2429" size="100,100">(set: $challenge to -1)
-(set: $marketKnowledge to -1)
-
-You arrive at the gates of the city.
-Where shall you head first?
-
-[[Head to the Market-&gt;Market]]
-[[Head towards the castle-&gt;Castle]]
-[[Head into a local Tavern-&gt;Tavern]]</tw-passagedata><tw-passagedata pid="43" name="Market" tags="" position="703,2699" size="100,100">Needs some context here
-(if: $marketKnowlede is 1)[
-Something about the cart here
-]
-
-
-[[Go to Tavern-&gt;Tavern]]
-[[Go to Castle-&gt;Castle]]</tw-passagedata><tw-passagedata pid="44" name="Castle" tags="" position="903,2799" size="100,100">[[Go to Tavern-&gt;Tavern]]
-[[Go to Market-&gt;Market]]</tw-passagedata><tw-passagedata pid="45" name="Tavern" tags="" position="1103,2500" size="100,100">{You enter the tavern and take a seat. This Tavern is a lot busier than the last, you keep your hood up as to not draw too much attention.
-You order a drink and sit down in the corner.
-
-(if: $drink is &lt; 5)[
-(link: &quot;Drink&quot;)[
-	(set: $drink to 1)
-	(go-to: &quot;Drinking2&quot;)
-]]
-}
-[[Listen to the conversations around you-&gt;listen]]
-[[Castle-&gt;Castle]]
-[[Market-&gt;Market]]
-</tw-passagedata><tw-passagedata pid="46" name="Drinking2" tags="" position="1241,2502" size="100,100">(link: &quot;Drink&quot;)[
-	(set: $drink to it + 1)
-	(go-to: &quot;Drinking2&quot;)
-]
-
-Your drink value is $drink.
-
-(if: $drink is 5)[
-	(goto: &quot;Tavern&quot;)
-	
-]
-(set: $aggression to 5)</tw-passagedata><tw-passagedata pid="47" name="listen" tags="" position="1103,2699" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+supriseAttackNoise: ./Assets/Audio/Sounds/kenney_impactsounds/impactPlate_heavy_004.ogg</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
