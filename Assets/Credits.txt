@@ -35,3 +35,21 @@ magicExplosion.wav - Bertsz, https://freesound.org/people/Bertsz/sounds/500904/
 loudNoise.wav - nekoninja, https://freesound.org/people/nekoninja/sounds/370203/
 
 fire.wav - Krisboruff, https://freesound.org/people/Krisboruff/sounds/17742/
+
+336598inspectorjfootsteps-concrete-a - InspectorJ,  https://freesound.org/people/InspectorJ/sounds/336598/
+
+192072pfranzenambient-battle-noise-swords-and-shouting - pfranzen,  https://freesound.org/people/pfranzen/sounds/192072/
+
+airball.wav -
+
+fireball.wav -
+
+earthball.wav -
+
+waterball.wav -
+
+wagonCart.wav -
+
+tavern.wav -
+
+Drinking_with_slurp.wav - craigglenday, 
