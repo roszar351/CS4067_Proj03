@@ -334,9 +334,6 @@ You feel wiery as you get up and walk out the door
 
 
 =&gt;&lt;=</tw-passagedata><tw-passagedata pid="38" name="Listen to locals" tags="" position="1550,1848" size="100,100">{
-(if: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[
-    (track:&#39;tavern&#39;, &#39;stop&#39;)
-]
 (if: $random&#39;s length is 0)[
 	There are no more choices left!
 	It&#39;s getting late, its time to leave.
@@ -347,12 +344,8 @@ You feel wiery as you get up and walk out the door
 (else:)[
 (set: $choice to (either: ...$random))
 ]
-}
-{
-}
-{
 (if: $choice is 1)[
-Peasant 1 - “Lots more patrols around lately eh?. Reckon its summat to do wiv the commotion over at the prison camp a while back.”
+Peasant 1 - “Lots more patrols around lately eh?. Reckon its summat to do wiv the commotion over at the prison camp a while back.&quot;
 
 Peasant 2 – “Aye, I reckon so. Tell ya what, I wouldn’t want no execution squad chasing after me. A damned scary prospect that.
 
@@ -426,9 +419,12 @@ Other Farmer – “Aye, and we’re the poor sods that’ll pay the price for i
 
 ]
 }
-[[Leave-&gt;Path outside Tavern]]</tw-passagedata><tw-passagedata pid="39" name="Back to Tavern" tags="" position="1354,2177" size="100,100">After the battle withe these soldiers, our hero is shocked to discover that the pesants and tavern customers are not happy with him. He naively presumed that they would be happy and view him as a hero but instead they are quite pissed off as he has just created a world of trouble for them. The travellers that he &quot;rescued&quot; are also not happy, they know that there will be more soldiers at the tavern soon as a result of the murders. Our hero is taken aback by this development, he is starting to learn that the world is a cruel place full of cowards and bullies.
+[[Leave-&gt;Path outside Tavern]]
+(if: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[
+    (track:&#39;tavern&#39;, &#39;stop&#39;)
+]</tw-passagedata><tw-passagedata pid="39" name="Back to Tavern" tags="" position="1354,2177" size="100,100">After the battle withe these soldiers, our hero is shocked to discover that the pesants and tavern customers are not happy with him. He naively presumed that they would be happy and view him as a hero but instead they are quite pissed off as he has just created a world of trouble for them. The travellers that he &quot;rescued&quot; are also not happy, they know that there will be more soldiers at the tavern soon as a result of the murders. Our hero is taken aback by this development, he is starting to learn that the world is a cruel place full of cowards and bullies.
 
-[[Head towards the city-&gt;Head towards city]]</tw-passagedata><tw-passagedata pid="40" name="Secret pathway discovered" tags="" position="1699,1991" size="100,100">You learn about this from the dialogue from the locals.
+[[Head towards the city-&gt;Head towards city]]</tw-passagedata><tw-passagedata pid="40" name="Secret pathway discovered" tags="" position="1721,1987" size="100,100">You learn about this from the dialogue from the locals.
 Sewage? 
 Rat infested? 
 Maybe that&#39;s why no guards are guarding it
@@ -572,8 +568,9 @@ You have now acquired an guards uniform!
 
 (if: (track: &#39;wagoncart&#39;, &#39;isplaying&#39;))[
     (track:&#39;wagoncart&#39;, &#39;stop&#39;)
-]</tw-passagedata><tw-passagedata pid="49" name="Inside Castle" tags="" position="1292,3115" size="100,100">[(track: &#39;concreteSteps&#39;, &#39;play&#39;)]
+]</tw-passagedata><tw-passagedata pid="49" name="Inside Castle" tags="" position="1292,3115" size="100,100">{[(track: &#39;concreteSteps&#39;, &#39;play&#39;)]
 You enter the castle and while you are looking around the castle hall, you can feel that you are not alone in the room. As you proceed to the stairway someone shouts: 
+}
 Continue.
 (click-replace: &quot;Continue.&quot;)[(if: (track: &#39;concreteSteps&#39;, &#39;isplaying&#39;))[
     (track: &#39;concreteSteps&#39;, &#39;stop&#39;)]
@@ -584,9 +581,9 @@ You: I have an urgent matter to bring to the general. Continue.]
 (click-replace: &quot;Continue.&quot;)
 [
 Guard: No I don&#39;t think you do!. 
-[[Fight-&gt;Fight]]]]</tw-passagedata><tw-passagedata pid="50" name="Fight" tags="" position="1295,3261" size="100,100">[(track: &#39;battlesound&#39;, &#39;play&#39;)]
+[[Fight-&gt;Fight]]]]</tw-passagedata><tw-passagedata pid="50" name="Fight" tags="" position="1297,3261" size="100,100">{[(track: &#39;battlesound&#39;, &#39;play&#39;)]
 The guard tries to slash you with his sword but you immediately jump back avoiding it. You hit the guard with $ability. The guard gets knocked out. You continue on investigating the castle.
-
+}
 {
 (if: $ability is &quot;Fire blast&quot;)[
 	(unless: (track: &#39;airball&#39;, &#39;isplaying&#39;))[(track: &#39;fireball&#39;, &#39;play&#39;)]
@@ -610,7 +607,7 @@ The guard tries to slash you with his sword but you immediately jump back avoidi
 }
 
 [[Go up staircase-&gt;After fight]] 
-</tw-passagedata><tw-passagedata pid="51" name="Confront General" tags="" position="1393,3582" size="100,100">General: I&#39;ve been expecting you.
+</tw-passagedata><tw-passagedata pid="51" name="Confront General" tags="" position="1397,3581" size="100,100">General: I&#39;ve been expecting you.
 Continue.
 (click-replace: &quot;Continue.&quot;)[
 You: How could&#39;ve you expected me?
@@ -627,23 +624,24 @@ Continue.]
 (click-replace: &quot;Continue.&quot;)[
 You: Then you should understand why I HAVE to do this.
 [[Fight with General-&gt; Fight with General]]]
-</tw-passagedata><tw-passagedata pid="52" name="After fight" tags="" position="1297,3406" size="100,100">(if: (track: &#39;battlesound&#39;, &#39;isplaying&#39;))[
+</tw-passagedata><tw-passagedata pid="52" name="After fight" tags="" position="1298,3406" size="100,100">{(if: (track: &#39;battlesound&#39;, &#39;isplaying&#39;))[
     (track: &#39;battlesound&#39;, &#39;stop&#39;)
 ]
-After heading up you reach the living quarters area. You silently scim??? through the rooms looking for the general. Continue.
+After heading up you reach the living quarters area. You silently skim through the rooms looking for the general.}
+Continue.
 (click-replace: &quot;Continue.&quot;)[
 After reaching the end of the hall you are certain that this has to be it. General&#39;s quarters. You gently open the door. There seems to be no one here. 
 Continue.]
 (click-replace: &quot;Continue.&quot;)[
 Sunddenly you see some figure with the corner of your eye standing on the balcony.
 [[Confront General-&gt;Confront General]] ]
-</tw-passagedata><tw-passagedata pid="53" name=" Fight with General" tags="" position="1292,3755" size="100,100">[(track: &#39;battlesound&#39;, &#39;play&#39;)]
+</tw-passagedata><tw-passagedata pid="53" name=" Fight with General" tags="" position="1296,3755" size="100,100">{[(track: &#39;battlesound&#39;, &#39;play&#39;)]
 The general reaches for his sword but to keep in mind he is a power user as well.
+}
 You get to attack first but the general deflected your $ability you used back at you throuwing you at the wall of the balcony.
 The fight is tense and there seems to be no winner at the time.
 Later after the fight goes inside you manage to land a spell and the general flies over his desk.
 Continue.
-
 {
 (if: $ability is &quot;Fire blast&quot;)[
 	(unless: (track: &#39;airball&#39;, &#39;isplaying&#39;))[(track: &#39;fireball&#39;, &#39;play&#39;)]
@@ -665,14 +663,13 @@ Continue.
 	
 ]
 }
-
 (click-replace: &quot;Continue.&quot;)[
 (if: (track: &#39;battlesound&#39;, &#39;isplaying&#39;))[
     (track: &#39;battlesound&#39;, &#39;stop&#39;)
 ][After a rigorous fight the entire room is destroyed, windows are shattered, torn books are lying around, the wardrobe cabinet is split in half with the general lying in the middle.
 With general&#39;s last breath you manage to find out where his boss is.
 You managed to defeat him! You are the winner.
-[[But what now?-&gt;Reflection]]]]</tw-passagedata><tw-passagedata pid="54" name="Reflection" tags="" position="1292,3907" size="100,100">As the dust settles you start to think that the general was right, the revenge didn&#39;t bring much good, at least it doesn&#39;t feel as good as you expected. Continue.
+[[But what now?-&gt;Reflection]]]]</tw-passagedata><tw-passagedata pid="54" name="Reflection" tags="" position="1289,3906" size="100,100">As the dust settles you start to think that the general was right, the revenge didn&#39;t bring much good, at least it doesn&#39;t feel as good as you expected. Continue.
 (click-replace: &quot;Continue.&quot;)[
 After a moment of reliazation you consider that some the people you met were right, what if I am not a hero but rather the villain. The general is dead but the person responsible is still out there. Now you know where to head next.
 Continue.]
@@ -683,7 +680,7 @@ Continue.]
 At least not yet...
 [[Game Completed-&gt;Completed Game]]]
 
-</tw-passagedata><tw-passagedata pid="55" name="Completed Game" tags="" position="1294,4078" size="100,100">Thank you for finishing the game! Stay tuned for the next instalment of the search for revenge of our protagonist.</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="55" name="Completed Game" tags="" position="1294,4079" size="100,100">Thank you for finishing the game! Stay tuned for the next instalment of the search for revenge of our protagonist.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
