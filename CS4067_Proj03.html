@@ -44,7 +44,7 @@ You were outnumbered, quickly overwhelmed you and put you in chains, they also p
 You get awakened by loud noises and see guards frantically running towards where the torture chambers are located. Listen closer
 }
 (click-replace: &quot;Listen closer&quot;)[(unless: (track: &#39;magicExplosion&#39;, &#39;isplaying&#39;))[(track: &#39;magicExplosion&#39;, &#39;play&#39;)] You see a bright glow followed by a loud explosion sound and people screaming. 
-[[It&#39;s time to do something.-&gt;Act1 Node2]]]</tw-passagedata><tw-passagedata pid="7" name="Act1 Node2" tags="Act1" position="1329,322" size="100,100">{
+[[It&#39;s time to do something.-&gt;Act1 Node2]]]</tw-passagedata><tw-passagedata pid="7" name="Act1 Node2" tags="Act1" position="1328,322" size="100,100">{
 (set: $act1Node2Choice to -1)
 It seems the guards are distracted, you should be able to escape this place.
 }
@@ -57,13 +57,13 @@ Leave your cell
 (set: $act1Node2Choice to 0)
 All the guards are too distracted with the fight that broke out in the torture chambers. You easily sneak past the one guard left at the exit.
 }
-[[Escape the prison-&gt;Act1 Node4]]</tw-passagedata><tw-passagedata pid="9" name="Act1 Node3 CharmResult" tags="Act1" position="1331,443" size="100,100">{
+[[Escape the prison-&gt;Act1 Node4]]</tw-passagedata><tw-passagedata pid="9" name="Act1 Node3 CharmResult" tags="Act1" position="1331,442" size="100,100">{
 (set: $act1Node2Choice to 1)
 You try to charm the guard to let you go but he quickly knocks you down and tells you not to move.
 }
 Your hear someone screaming and running towards you and the guard.
 (click-append: &quot;Your hear someone screaming and running towards you and the guard.&quot;)[(unless: (track: &#39;screaming&#39;, &#39;isplaying&#39;))[(track: &#39;screaming&#39;, &#39;play&#39;)] 
-You notice the person is on fire, screaming from the pain. He blindly runs into the guard knocking him down. This is your chance to [[escape.-&gt;Act1 Node4]]]</tw-passagedata><tw-passagedata pid="10" name="Act1 Node3 ForceResult" tags="Act1" position="1481,442" size="100,100">{
+You notice the person is on fire, screaming from the pain. He blindly runs into the guard knocking him down. This is your chance to [[escape.-&gt;Act1 Node4]]]</tw-passagedata><tw-passagedata pid="10" name="Act1 Node3 ForceResult" tags="Act1" position="1481,441" size="100,100">{
 (set: $aggression to $aggression + 1)
 (set: $act1Node2Choice to 2)
 The guard has his back towards you.
@@ -73,14 +73,14 @@ This is your chance for a suprise attack!
 (click-append: &quot;suprise attack!&quot;)[(unless: (track: &#39;supriseAttackNoise&#39;, &#39;isplaying&#39;))[(track: &#39;supriseAttackNoise&#39;, &#39;play&#39;)] You knock the guard out, and proceed to [[escape the prison.-&gt;Act1 Node4]]]
 }</tw-passagedata><tw-passagedata pid="11" name="Act1 Node4" tags="Act1" position="1333,571" size="100,100">You escaped the prison but you can&#39;t just stop and celebrate. You need to find some way to remove the collar and come up with a plan to defeat the Mayor. 
 Your village has been burned down, but you remember that there is another village not too far, you heard rumors about an elder that lives in that village and has helped power users before.
-[[Head to the vilalge-&gt;Act1 Node5]]</tw-passagedata><tw-passagedata pid="12" name="Act1 Node5" tags="Act1" position="1330,696" size="100,100">You reached the village, people quickly notice the collar around your neck, giving you weird looks. You won&#39;t have much time before someone notifies the execution squad.
+[[Head to the village-&gt;Act1 Node5]]</tw-passagedata><tw-passagedata pid="12" name="Act1 Node5" tags="Act1" position="1330,697" size="100,100">You reached the village, people quickly notice the collar around your neck, giving you weird looks. You won&#39;t have much time before someone notifies the execution squad.
 Try to find the elder
 (click-replace: &quot;Try to find the elder&quot;)[You ask people about the elder, some people tell you to go away before you ruin their lives others that answer don&#39;t know anything about such elder. Suddenly someone grabs your shoulder and drags you into an alley. 
 Try to fight back]
 (click-replace: &quot;Try to fight back&quot;)[As you are about to strike, you hear the person behind you say:
 &quot;You should not be walking around with that collar of yours, it scares people. Now tell me why are you here&quot;.
 [[Answer politely, telling the man about yourself, how you escaped the prison and that you are looking for help from the elder-&gt;Act1 Node6 Friendly]]
-[[Answer politely, hiding ehe details about youself, how you escaped and about the elder-&gt;Act1 Node6 Neutral]]
+[[Answer politely, hiding the details about youself, how you escaped and about the elder-&gt;Act1 Node6 Neutral]]
 [[Answer agressively, demanding the man to let you go-&gt;Act1 Node6 Agressive]]
 ] </tw-passagedata><tw-passagedata pid="13" name="CurrentSituation" tags="" position="1205,201" size="100,100">{
 (if: (track: &#39;fireNoise&#39;, &#39;isplaying&#39;))[
@@ -476,7 +476,7 @@ Attack!
 	]
 ]
 
-(if: $soldierKnowledge is 1)[
+(elseif: $soldierKnowledge is 1)[
 You come up to the gates of the castle, you see a group of soldiers gathering outside of the barracks about to start their patrol.
 You quickly join their ranks in the soldiers uniform you acquired earlier.
 [[Go with the patrol inside the castle.-&gt;Act 3]]
@@ -587,6 +587,28 @@ Guard: No I don&#39;t think you do!.
 [[Fight-&gt;Fight]]]]</tw-passagedata><tw-passagedata pid="50" name="Fight" tags="" position="1295,3261" size="100,100">[(track: &#39;battlesound&#39;, &#39;play&#39;)]
 The guard tries to slash you with his sword but you immediately jump back avoiding it. You hit the guard with $ability. The guard gets knocked out. You continue on investigating the castle.
 
+{
+(if: $ability is &quot;Fire blast&quot;)[
+	(unless: (track: &#39;airball&#39;, &#39;isplaying&#39;))[(track: &#39;fireball&#39;, &#39;play&#39;)]
+	
+]
+
+(if: $ability is &quot;Water blast&quot;)[
+	(unless: (track: &#39;waterball&#39;, &#39;isplaying&#39;))[(track: &#39;waterball&#39;, &#39;play&#39;)]
+	
+]
+
+(if: $ability is &quot;Earth blast&quot;)[
+	(unless: (track: &#39;earthball&#39;, &#39;isplaying&#39;))[(track: &#39;earthball&#39;, &#39;play&#39;)]
+	
+]
+
+(if: $ability is &quot;Air blast&quot;)[
+	(unless: (track: &#39;airball&#39;, &#39;isplaying&#39;))[(track: &#39;airball&#39;, &#39;play&#39;)]
+	
+]
+}
+
 [[Go up staircase-&gt;After fight]] 
 </tw-passagedata><tw-passagedata pid="51" name="Confront General" tags="" position="1393,3582" size="100,100">General: I&#39;ve been expecting you.
 Continue.
@@ -621,6 +643,29 @@ You get to attack first but the general deflected your $ability you used back at
 The fight is tense and there seems to be no winner at the time.
 Later after the fight goes inside you manage to land a spell and the general flies over his desk.
 Continue.
+
+{
+(if: $ability is &quot;Fire blast&quot;)[
+	(unless: (track: &#39;airball&#39;, &#39;isplaying&#39;))[(track: &#39;fireball&#39;, &#39;play&#39;)]
+	
+]
+
+(if: $ability is &quot;Water blast&quot;)[
+	(unless: (track: &#39;waterball&#39;, &#39;isplaying&#39;))[(track: &#39;waterball&#39;, &#39;play&#39;)]
+	
+]
+
+(if: $ability is &quot;Earth blast&quot;)[
+	(unless: (track: &#39;earthball&#39;, &#39;isplaying&#39;))[(track: &#39;earthball&#39;, &#39;play&#39;)]
+	
+]
+
+(if: $ability is &quot;Air blast&quot;)[
+	(unless: (track: &#39;airball&#39;, &#39;isplaying&#39;))[(track: &#39;airball&#39;, &#39;play&#39;)]
+	
+]
+}
+
 (click-replace: &quot;Continue.&quot;)[
 (if: (track: &#39;battlesound&#39;, &#39;isplaying&#39;))[
     (track: &#39;battlesound&#39;, &#39;stop&#39;)
