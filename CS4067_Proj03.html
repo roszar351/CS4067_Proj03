@@ -27,7 +27,7 @@
 Welcome!
 }
 You can change sound volume by expanding the panel on the left.
-[[Begin Story!-&gt;Act 1]]</tw-passagedata><tw-passagedata pid="2" name="Background1" tags="Intro" position="710,201" size="100,100">{
+[[Begin Story!-&gt;Act 1]]</tw-passagedata><tw-passagedata pid="2" name="Background1" tags="Intro" position="709,201" size="100,100">{
 (set: $aggression to 0)
 Fifteen years ago, a mysterious event struck these lands known as &#39;The Awakening&#39;. After this event a large part of the world&#39;s population gained access to powers that were dormant inside of them. 
 People quickly became power hungry and started wars with each other, using their new found powers to defeat anyone in their path and take over control. One person in particular, known as the Mayor has been very successful in taking lands from all of his enemies. Thanks to his power he drains other peoples&#39; powers to strengthen himself, and is using his power to slowly seize control of the whole world.
@@ -36,7 +36,7 @@ People quickly became power hungry and started wars with each other, using their
 (click-append:&quot;your powers.&quot;)[(unless: (track: &#39;fallingTree&#39;, &#39;isplaying&#39;))[(track: &#39;fallingTree&#39;, &#39;play&#39;)] While the person was grateful for saving their life, you could sense that your simple life was about to change.
 [[Continue-&gt;Background3]]]</tw-passagedata><tw-passagedata pid="4" name="Background3" tags="Intro" position="957,198" size="100,100">It wasn&#39;t going to be long before Mayor&#39;s execution squad showed up and forcefuly searched the village for the source of the power they sensed because of you. 
 You did try to warn the villagers not to stay as the squad is known to use any means they deem necessary to get what they want but they didn&#39;t want to abandon their home. You had to run, taking only the most valuable items and headed south.
-[[Continue-&gt;Background4]]</tw-passagedata><tw-passagedata pid="5" name="Background4" tags="Intro" position="1082,200" size="100,100">You kept running, but it didn&#39;t take long for the execution squad to catch up. They are formed of some of the best hunters found in these lands. 
+[[Continue-&gt;Background4]]</tw-passagedata><tw-passagedata pid="5" name="Background4" tags="Intro" position="1082,199" size="100,100">You kept running, but it didn&#39;t take long for the execution squad to catch up. They are formed of some of the best hunters found in these lands. 
 You were outnumbered, quickly overwhelmed you and put you in chains, they also placed a strange collar on your neck that prevented you from using your powers.
 (unless: (track: &#39;fireNoise&#39;, &#39;isplaying&#39;))[(track: &#39;fireNoise&#39;, &#39;loop&#39;, true) (track: &#39;fireNoise&#39;, &#39;play&#39;)] They dragged you through the village or at least what was left of it, everything was on fire, some of the people were in chains and others were dead in the streets. This was just another village that was used as an example of what happens to people that resist the Mayor&#39;s authority over these lands.
 [[Continue-&gt;CurrentSituation]]</tw-passagedata><tw-passagedata pid="6" name="Act1 Node1 Start" tags="Act1" position="1332,203" size="100,100">{
@@ -118,7 +118,7 @@ The crossroads for the masters is approaching, which path will guide me to learn
 [[Train in the sky, controlling the currents around you.-&gt;Air Training]]
 
 
-(set: $ability to &quot;NaN&quot;)</tw-passagedata><tw-passagedata pid="19" name="hal.tracks" tags="" position="802,40" size="100,100">mainMusic: ./Assets/Audio/Music/mysteriousPiano.mp3
+(set: $ability to &quot;NaN&quot;)</tw-passagedata><tw-passagedata pid="19" name="hal.tracks" tags="" position="803,39" size="100,100">mainMusic: ./Assets/Audio/Music/mysteriousPiano.mp3
 musicTwo: ./Assets/Audio/Music/mysteriousBackgroundOrchestra.mp3
 musicThree: ./Assets/Audio/Music/mysteriousEvent.mp3
 musicFour: ./Assets/Audio/Music/mysteryOfDarkForest.mp3
@@ -129,14 +129,21 @@ loudNoise: ./Assets/Audio/Sounds/loudNoise.wav
 fireNoise: ./Assets/Audio/Sounds/fire.wav
 supriseAttackNoise: ./Assets/Audio/Sounds/kenney_impactsounds/impactPlate_heavy_004.ogg
 battlesound: ./Assets/Audio/Sounds/192072__pfranzen__ambient-battle-noise-swords-and-shouting.mp3
-concreteSteps: ./Assets/Audio/Sounds/336598__inspectorj__footsteps-concrete-a.wav</tw-passagedata><tw-passagedata pid="20" name="Act 2" tags="" position="1342,1087" size="100,100">(live: 2s)[(goto: &quot;Act2 The Map&quot;)]
+concreteSteps: ./Assets/Audio/Sounds/336598__inspectorj__footsteps-concrete-a.wav
+Drinking_with_slurp: ./Assets/Audio/Sounds/Drinking_with_slurp.wav
+fireball: ./Assets/Audio/Sounds/fireball.wav
+waterball: ./Assets/Audio/Sounds/waterball.wav
+earthball: ./Assets/Audio/Sounds/earthball.wav
+airball: ./Assets/Audio/Sounds/airball.wav
+tavern: ./Assets/Audio/Sounds/tavern.wav
+wagoncart: ./Assets/Audio/Sounds/wagonCart.wav</tw-passagedata><tw-passagedata pid="20" name="Act 2" tags="" position="1342,1087" size="100,100">(live: 2s)[(goto: &quot;Act2 The Map&quot;)]
 
 
 =&gt;&lt;=
 #Act 2</tw-passagedata><tw-passagedata pid="21" name="Act 1" tags="" position="581,201" size="100,100">(live: 2s)[(goto: &quot;Background1&quot;)]
 
 =&gt;&lt;=
-#Act 1</tw-passagedata><tw-passagedata pid="22" name="Fire Training" tags="" position="1145,1364" size="100,100">The path to the fire master is long and treacherous, you arrive at the base of a volcano, there are vents all around you, releasing sulphurous fumes. Its hard to breath but you must keep going. 
+#Act 1</tw-passagedata><tw-passagedata pid="22" name="Fire Training" tags="" position="1145,1362" size="100,100">The path to the fire master is long and treacherous, you arrive at the base of a volcano, there are vents all around you, releasing sulphurous fumes. Its hard to breath but you must keep going. 
 Continue.
 
 (click-replace: &quot;Continue.&quot;)[The cracks in the ground being to separate, a totem raises from the earth in front of you. You step back as it speaks. Continue.]
@@ -148,7 +155,7 @@ Yes I&#39;m worthy.]
 </tw-passagedata><tw-passagedata pid="23" name="Water Training" tags="" position="1285,1363" size="100,100">You travel by the nearby river. It goes for so long that it later becomes a spring and leads you to the source.
 Continue.
 (click-replace: &quot;Continue.&quot;)[
-When you reach the source the water circles the ground around you and you notice that on top of the rock from underneath which spring starts there is a totem.
+When you reach the source, the water circles the ground around you and you notice that on top of the rock underneath the spring there is a totem.
 This totem suddenly speaks to you.
 Continue.
 ]
@@ -171,33 +178,34 @@ Continue.
  - Welcome traveler, have you come to catch some air?
  - If you&#39;d like Ill teach you how to grab and throw the force of the wind, all you need is patience.
  [[Continue-&gt;train the air element]]]
-</tw-passagedata><tw-passagedata pid="26" name="train the fire element" tags="" position="1137,1504" size="100,100">The earth shakes beneath your feet, cracking open, target dummies begin to surface.
+</tw-passagedata><tw-passagedata pid="26" name="train the fire element" tags="" position="1138,1504" size="100,100">The earth shakes beneath your feet, cracking open, target dummies begin to surface.
 
 Stand with your feet apart, feel the temperature of your body rise. Continue.
 (click-replace: &quot;Continue.&quot;)[
 Good. Now feel it build up from your core, direct it towards your hands. Release!]
 (click-replace: &quot;Release!&quot;)[
 A fireball shoots from the palm of your hand and hits the target dummy in the chest.
-Ingulfing it in flames. Continue.]
-
+Ingulfing it in flames. Continue.
+(unless: (track: &#39;fireball&#39;, &#39;isplaying&#39;))[(track: &#39;fireball&#39;, &#39;play&#39;)]]
 (click-replace: &quot;Continue.&quot;)[
 
 Not bad.
 
 You like this feeling and spend the rest of the day practicing this technique.
 
-[[Continue-&gt;Finish fire training]]                                         ]             </tw-passagedata><tw-passagedata pid="27" name="Finish fire training" tags="" position="1145,1655" size="100,100">You&#39;ve proven to be worthy. You should continue your journey from here and seek out another master.
+[[Continue-&gt;Finish fire training]]                                         ]             </tw-passagedata><tw-passagedata pid="27" name="Finish fire training" tags="" position="1150,1654" size="100,100">You&#39;ve proven to be worthy. You should continue your journey from here and seek out another master.
 (set: $ability to &quot;Fire blast&quot;)
 Set off on your journey to find the next master. Where to go?
 (click-replace: &quot;Where to go?&quot;)[
 [[Water Master -&gt; tavern on the way]]
 [[Earth Master -&gt; tavern on the way]]
 [[Air Master -&gt; tavern on the way]]
-]</tw-passagedata><tw-passagedata pid="28" name=" tavern on the way" tags="" position="1350,1843" size="100,100">You come across a Tavern on your journey, you are tired and could do with resting for a while.
+]</tw-passagedata><tw-passagedata pid="28" name=" tavern on the way" tags="" position="1350,1842" size="100,100">You come across a Tavern on your journey, you are tired and could do with resting for a while.
 Enter the Tavern
 {(set: $drink to -1)
 (set: $random to (a: 1, 2, 3, 4, 5, 6))}
 (click-replace: &quot;Enter the Tavern&quot;)[
+(unless: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[(track: &#39;tavern&#39;, &#39;play&#39;)]
 You enter the tavern and take a look around.
 The place is quite desolate, not many people are there.
 The few locals seem stressed and depressed.
@@ -210,10 +218,13 @@ You order a drink and sit down at a table in the corner, away from the light.
 ]
 [[Listen to the locals-&gt;Listen to locals]]
 [[Leave the tavern-&gt;Path outside Tavern]]
-]</tw-passagedata><tw-passagedata pid="29" name="train the water element" tags="" position="1283,1506" size="100,100">After proceeding, the water raises producing target dummies and the training begins.
+]</tw-passagedata><tw-passagedata pid="29" name="train the water element" tags="" position="1283,1505" size="100,100">After proceeding, the water raises producing target dummies and the training begins.
 The aim is to manage controlling the water to conjure protective shields and manipulate it to disarm enemies.
 Continue.
-(click-replace: &quot;Continue.&quot;)[After 3 days have passed you prove to be a worthy water conjurer and the totem speaks again.
+(click-replace: &quot;Continue.&quot;)[
+After 3 days have passed you prove to be a worthy water conjurer and the totem speaks again.
+You fire a waterball out into the lake to prove to yourself that you can do it!
+(unless: (track: &#39;waterball&#39;, &#39;isplaying&#39;))[(track: &#39;waterball&#39;, &#39;play&#39;)]
  - You are now ready to become one with the water flows and other sources of power you shall seek.
 [[Continue-&gt;Finish water training]]]
 </tw-passagedata><tw-passagedata pid="30" name="Finish water training" tags="" position="1289,1653" size="100,100">You can now proceed to further training. Lets check what&#39;s next on the map given by the elder.
@@ -223,13 +234,15 @@ Set off on your journey to find the next master. Where to go?
 [[Fire Master -&gt; tavern on the way]]
 [[Earth Master -&gt; tavern on the way]]
 [[Air Master -&gt; tavern on the way]]
-]</tw-passagedata><tw-passagedata pid="31" name="train the earth element" tags="" position="1424,1502" size="100,100">This training initially tests the agility from many rocks falling your way. Later you learn on how to manipulate rocks and earth to produce throwing knives out of them and you practice at the nearby rock structures 
+]</tw-passagedata><tw-passagedata pid="31" name="train the earth element" tags="" position="1424,1501" size="100,100">This training initially tests the agility from many rocks falling your way. Later you learn on how to manipulate rocks and earth to produce throwing knives out of them and you practice at the nearby rock structures 
 (or stalactites and stalagmites).
 Continue.
-(click-replace: &quot;Continue.&quot;)[After an exausting day the totem stumbles and falls apart while producing its final words that echo through the cave
+(click-replace: &quot;Continue.&quot;)[
+(unless: (track: &#39;earthball&#39;, &#39;isplaying&#39;))[(track: &#39;earthball&#39;, &#39;play&#39;)]
+After an exausting day the totem stumbles and falls apart while producing its final words that echo through the cave
  - continue your journey, find the next master
  [[Continue-&gt;Finish earth training]]]
-</tw-passagedata><tw-passagedata pid="32" name="Finish earth training" tags="" position="1428,1652" size="100,100">You must go forth and find another master to train with.
+</tw-passagedata><tw-passagedata pid="32" name="Finish earth training" tags="" position="1432,1651" size="100,100">You must go forth and find another master to train with.
 (set: $ability to &quot;Earth blast&quot;)
 Set off on your journey. Where to go?
 (click-replace: &quot;Where to go?&quot;)[
@@ -240,19 +253,30 @@ Set off on your journey. Where to go?
 Continue.
  (click-replace: &quot;Continue.&quot;)[
 After several days of meditation you can feel under your skin how the air fills in your bones, veins and surrounds your body.
-Continue.
+You raise your hands and aim out in front of you.
+You feel the air wrap around the palm of your hands as it rushes past you.
+Release!
 ]
- (click-replace: &quot;Continue.&quot;)[
+(click-replace: &quot;Release!&quot;)[
+(unless: (track: &#39;airball&#39;, &#39;isplaying&#39;))[(track: &#39;airball&#39;, &#39;play&#39;)]
+Sending a Blast of air out in front of you.
+
+You hear something in the wind...
+
   - Proceed with your journey - the voice says - you are ready to be lifted by the air. 
  [[Continue-&gt;Finish air training]]] 
-</tw-passagedata><tw-passagedata pid="34" name="Finish air training" tags="" position="1572,1652" size="100,100">You can now proceed to further training. Lets check what&#39;s next on the map given by the elder.
+</tw-passagedata><tw-passagedata pid="34" name="Finish air training" tags="" position="1571,1652" size="100,100">You can now proceed to further training. Lets check what&#39;s next on the map given by the elder.
 (set: $ability to &quot;Air blast&quot;)
 Set off on your journey to find the next master. Where to go?
 (click-replace: &quot;Where to go?&quot;)[
 [[Water Master -&gt; tavern on the way]]
 [[Earth Master -&gt; tavern on the way]]
 [[Fire Master -&gt; tavern on the way]]
-]</tw-passagedata><tw-passagedata pid="35" name="Drinking" tags="" position="1151,1863" size="100,100">(link: &quot;Drink&quot;)[
+]</tw-passagedata><tw-passagedata pid="35" name="Drinking" tags="" position="1151,1862" size="100,100">(unless: (track: &#39;Drinking_with_slurp&#39;, &#39;isplaying&#39;))[(track: &#39;Drinking_with_slurp&#39;, &#39;play&#39;)]
+(if: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[
+    (track:&#39;tavern&#39;, &#39;stop&#39;)
+]
+(link: &quot;Drink&quot;)[
 	(set: $drink to it + 1)
 	(go-to: &quot;Drinking&quot;)
 ]
@@ -263,17 +287,43 @@ Your drink value is $drink.
 	(goto: &quot;T&quot;)
 	(set: $aggression to 5)
 ]
-[[Leave-&gt;Path outside Tavern]]</tw-passagedata><tw-passagedata pid="36" name="Path outside Tavern" tags="" position="1422,2024" size="100,100">Walking down the street, you see soldiers beating up a peasant.
-
+[[Leave-&gt;Path outside Tavern]]</tw-passagedata><tw-passagedata pid="36" name="Path outside Tavern" tags="" position="1422,2023" size="100,100">Walking down the street, you see soldiers beating up a peasant.
+(if: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[
+    (track:&#39;tavern&#39;, &#39;stop&#39;)
+]
+{
 (if: $aggression &gt; 4)[
 	You stampede towards then, throwing &quot;variable&quot; blasts at them killing them instantly. Your aggression injures the peasant.
 Continue.
 ]
+
 (else:)[
-You engage the soldiers, saving the peasant.
-Continue.
+You engage the soldiers, shooting a $ability at them!
+
+{
+(if: $ability is &quot;Fire blast&quot;)[
+	(unless: (track: &#39;airball&#39;, &#39;isplaying&#39;))[(track: &#39;fireball&#39;, &#39;play&#39;)]
+	
 ]
 
+(if: $ability is &quot;Water blast&quot;)[
+	(unless: (track: &#39;waterball&#39;, &#39;isplaying&#39;))[(track: &#39;waterball&#39;, &#39;play&#39;)]
+	
+]
+
+(if: $ability is &quot;Earth blast&quot;)[
+	(unless: (track: &#39;earthball&#39;, &#39;isplaying&#39;))[(track: &#39;earthball&#39;, &#39;play&#39;)]
+	
+]
+
+(if: $ability is &quot;Air blast&quot;)[
+	(unless: (track: &#39;airball&#39;, &#39;isplaying&#39;))[(track: &#39;airball&#39;, &#39;play&#39;)]
+	
+]
+}
+Continue.
+]
+}
 (click-replace: &quot;Continue.&quot;)[You raise your eyes, as the liberation of the country is about to begin. You realise that you can win a battle and are stronger than you think.
 [[Back to Tavern-&gt;Back to Tavern]]
 ]</tw-passagedata><tw-passagedata pid="37" name="T" tags="" position="1150,1986" size="100,100">You&#39;ve had a lot to drink.
@@ -283,7 +333,10 @@ You feel wiery as you get up and walk out the door
 (live: 4s)[(goto: &quot;Path outside Tavern&quot;)]
 
 
-=&gt;&lt;=</tw-passagedata><tw-passagedata pid="38" name="Listen to locals" tags="" position="1552,1848" size="100,100">{
+=&gt;&lt;=</tw-passagedata><tw-passagedata pid="38" name="Listen to locals" tags="" position="1550,1848" size="100,100">{
+(if: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[
+    (track:&#39;tavern&#39;, &#39;stop&#39;)
+]
 (if: $random&#39;s length is 0)[
 	There are no more choices left!
 	It&#39;s getting late, its time to leave.
@@ -373,7 +426,7 @@ Other Farmer – “Aye, and we’re the poor sods that’ll pay the price for i
 
 ]
 }
-[[Leave-&gt;Path outside Tavern]]</tw-passagedata><tw-passagedata pid="39" name="Back to Tavern" tags="" position="1354,2178" size="100,100">After the battle withe these soldiers, our hero is shocked to discover that the pesants and tavern customers are not happy with him. He naively presumed that they would be happy and view him as a hero but instead they are quite pissed off as he has just created a world of trouble for them. The travellers that he &quot;rescued&quot; are also not happy, they know that there will be more soldiers at the tavern soon as a result of the murders. Our hero is taken aback by this development, he is starting to learn that the world is a cruel place full of cowards and bullies.
+[[Leave-&gt;Path outside Tavern]]</tw-passagedata><tw-passagedata pid="39" name="Back to Tavern" tags="" position="1354,2177" size="100,100">After the battle withe these soldiers, our hero is shocked to discover that the pesants and tavern customers are not happy with him. He naively presumed that they would be happy and view him as a hero but instead they are quite pissed off as he has just created a world of trouble for them. The travellers that he &quot;rescued&quot; are also not happy, they know that there will be more soldiers at the tavern soon as a result of the murders. Our hero is taken aback by this development, he is starting to learn that the world is a cruel place full of cowards and bullies.
 
 [[Head towards the city-&gt;Head towards city]]</tw-passagedata><tw-passagedata pid="40" name="Secret pathway discovered" tags="" position="1699,1991" size="100,100">You learn about this from the dialogue from the locals.
 Sewage? 
@@ -382,9 +435,9 @@ Maybe that&#39;s why no guards are guarding it
 
 Secret entrance to the castle
 
-[[Take path to the castle-&gt;Confront General]]</tw-passagedata><tw-passagedata pid="41" name="Head towards city" tags="" position="1351,2321" size="100,100">=&gt;&lt;=
+[[Take path to the castle-&gt;Confront General]]</tw-passagedata><tw-passagedata pid="41" name="Head towards city" tags="" position="1349,2321" size="100,100">=&gt;&lt;=
 You follow the road towards the city gates
-(live: 5s)[(goto: &quot;Arrival at city gates&quot;)]</tw-passagedata><tw-passagedata pid="42" name="Arrival at city gates" tags="" position="1352,2450" size="100,100">{(set: $challenge to -1)
+(live: 3s)[(goto: &quot;Arrival at city gates&quot;)]</tw-passagedata><tw-passagedata pid="42" name="Arrival at city gates" tags="" position="1351,2450" size="100,100">{(set: $challenge to -1)
 (set: $marketKnowledge to -1)
 (set: $peasantKnowledge to -1)
 (set: $soldierKnowledge to -1)
@@ -397,14 +450,20 @@ Where shall you head first?
 [[Head into a local Tavern-&gt;Tavern]]</tw-passagedata><tw-passagedata pid="43" name="Market" tags="" position="1088,2688" size="100,100">(if: $marketKnowledge is 1)[
 You see a cart, unmanned. 
 You jump into the cart, getting under the covers.
+Continue.
+(click-replace: &quot;Continue.&quot;)[
+You feel the wagon begin to move.
+You are now on the way to the castle.
+(unless: (track: &#39;wagoncart&#39;, &#39;isplaying&#39;))[(track: &#39;wagoncart&#39;, &#39;play&#39;)]
+(live: 4s)[(goto: &quot;Act 3&quot;)]
+]
 ]
 (else:)[
 the market seems empty. There&#39;s nothing to do here.
 Maybe you should investigate the local tavern.
-]
-
 [[Go to Tavern-&gt;Tavern]]
-[[Go to Castle-&gt;Castle]]</tw-passagedata><tw-passagedata pid="44" name="Castle" tags="" position="1293,2784" size="100,100">(if: $peasantKnowledge is 1)[
+[[Go to Castle-&gt;Castle]]
+]</tw-passagedata><tw-passagedata pid="44" name="Castle" tags="" position="1292,2783" size="100,100">{(if: $peasantKnowledge is 1)[
 You are full of confidence and decide to charge the guards at the gate!
 Attack!
 	(click-replace: &quot;Attack!&quot;)[
@@ -422,8 +481,16 @@ You come up to the gates of the castle, you see a group of soldiers gathering ou
 You quickly join their ranks in the soldiers uniform you acquired earlier.
 [[Go with the patrol inside the castle.-&gt;Act 3]]
 ]
+}
+(else: )[
+
+There are guards on duty at the gate.
+You don&#39;t want to approach them without a plan of action.
+Maybe you should fall back for now.
+
 [[Go to Tavern-&gt;Tavern]]
-[[Go to Market-&gt;Market]]</tw-passagedata><tw-passagedata pid="45" name="Tavern" tags="" position="1549,2519" size="100,100">{
+[[Go to Market-&gt;Market]]
+]</tw-passagedata><tw-passagedata pid="45" name="Tavern" tags="" position="1549,2519" size="100,100">{
 (set: $listen to -1)
 You enter the tavern and take a seat. This Tavern is a lot busier than the last, you keep your hood up as to not draw too much attention.
 You order a drink and sit down in the corner.
@@ -447,7 +514,8 @@ You order a drink and sit down in the corner.
 ]
 [[Castle-&gt;Castle]]
 [[Market-&gt;Market]]
-</tw-passagedata><tw-passagedata pid="46" name="Drinking2" tags="" position="1098,2488" size="100,100">(link: &quot;Drink&quot;)[
+</tw-passagedata><tw-passagedata pid="46" name="Drinking2" tags="" position="1098,2488" size="100,100">(unless: (track: &#39;Drinking_with_slurp&#39;, &#39;isplaying&#39;))[(track: &#39;Drinking_with_slurp&#39;, &#39;play&#39;)]
+(link: &quot;Drink&quot;)[
 	(set: $drink to it + 1)
 	(go-to: &quot;Drinking2&quot;)
 ]
@@ -500,7 +568,11 @@ You have now acquired an guards uniform!
 </tw-passagedata><tw-passagedata pid="48" name="Act 3" tags="" position="1295,2985" size="100,100">(live: 2s)[(goto: &quot;Inside Castle&quot;)]
 
 =&gt;&lt;=
-#Act 3</tw-passagedata><tw-passagedata pid="49" name="Inside Castle" tags="" position="1292,3115" size="100,100">[(track: &#39;concreteSteps&#39;, &#39;play&#39;)]
+#Act 3
+
+(if: (track: &#39;wagoncart&#39;, &#39;isplaying&#39;))[
+    (track:&#39;wagoncart&#39;, &#39;stop&#39;)
+]</tw-passagedata><tw-passagedata pid="49" name="Inside Castle" tags="" position="1292,3115" size="100,100">[(track: &#39;concreteSteps&#39;, &#39;play&#39;)]
 You enter the castle and while you are looking around the castle hall, you can feel that you are not alone in the room. As you proceed to the stairway someone shouts: 
 Continue.
 (click-replace: &quot;Continue.&quot;)[(if: (track: &#39;concreteSteps&#39;, &#39;isplaying&#39;))[
@@ -512,7 +584,7 @@ You: I have an urgent matter to bring to the general. Continue.]
 (click-replace: &quot;Continue.&quot;)
 [
 Guard: No I don&#39;t think you do!. 
-[[Fight-&gt;Fight]]]]</tw-passagedata><tw-passagedata pid="50" name="Fight" tags="" position="1296,3262" size="100,100">[(track: &#39;battlesound&#39;, &#39;play&#39;)]
+[[Fight-&gt;Fight]]]]</tw-passagedata><tw-passagedata pid="50" name="Fight" tags="" position="1295,3262" size="100,100">[(track: &#39;battlesound&#39;, &#39;play&#39;)]
 The guard tries to slash you with his sword but you immediately jump back avoiding it. You hit the guard with &quot;ABILITY&quot;. The guard gets knocked out. You continue on investigating the castle.
 
 [[Go up staircase-&gt;After fight]] 
