@@ -7,6 +7,11 @@ Keep track of all variables here, helps to know what the game keeps track of and
 * $act1Node2Choice: default=-1, sneak=0, charm=1, force=2
 * $firstMaster: default=-1, 1-4 depending on which master player went first
 * $secondMaster: default=-1, 1-4 depending on which master player went second
+* $ability: default=Nan, Fire blast, Water blast, Earth blast, Air blast
+* $drink: default=-1, 1-5
+* $marketKnowledge: default=-1, 1 = true
+* $peasantKnowledge: default=-1, 1 = true
+* $soldierKnowledge: default=-1, 1 = true
 
 ## Credits for assets
-Make sure to credit all assets used in Assets/Credits.txt
+All Credits are in Assets/Credits.txt

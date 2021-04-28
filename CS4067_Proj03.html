@@ -200,7 +200,7 @@ Set off on your journey to find the next master. Where to go?
 [[Water Master -&gt; tavern on the way]]
 [[Earth Master -&gt; tavern on the way]]
 [[Air Master -&gt; tavern on the way]]
-]</tw-passagedata><tw-passagedata pid="28" name=" tavern on the way" tags="" position="1350,1842" size="100,100">You come across a Tavern on your journey, you are tired and could do with resting for a while.
+]</tw-passagedata><tw-passagedata pid="28" name=" tavern on the way" tags="" position="1349,1842" size="100,100">You come across a Tavern on your journey, you are tired and could do with resting for a while.
 Enter the Tavern
 {(set: $drink to -1)
 (set: $random to (a: 1, 2, 3, 4, 5, 6))}
@@ -433,8 +433,7 @@ Secret entrance to the castle
 
 [[Take path to the castle-&gt;Confront General]]</tw-passagedata><tw-passagedata pid="41" name="Head towards city" tags="" position="1349,2321" size="100,100">=&gt;&lt;=
 You follow the road towards the city gates
-(live: 3s)[(goto: &quot;Arrival at city gates&quot;)]</tw-passagedata><tw-passagedata pid="42" name="Arrival at city gates" tags="" position="1351,2450" size="100,100">{(set: $challenge to -1)
-(set: $marketKnowledge to -1)
+(live: 3s)[(goto: &quot;Arrival at city gates&quot;)]</tw-passagedata><tw-passagedata pid="42" name="Arrival at city gates" tags="" position="1351,2450" size="100,100">{(set: $marketKnowledge to -1)
 (set: $peasantKnowledge to -1)
 (set: $soldierKnowledge to -1)
 
@@ -522,7 +521,7 @@ Your drink value is $drink.
 	(goto: &quot;Tavern&quot;)
 	
 ]
-(set: $aggression to 5)</tw-passagedata><tw-passagedata pid="47" name="listen" tags="" position="1593,2684" size="100,100">(if: $listen is 1)[
+(set: $aggression to 5)</tw-passagedata><tw-passagedata pid="47" name="listen" tags="" position="1592,2684" size="100,100">(if: $listen is 1)[
 Peasant 1 – “Reports of some commotion out the road this week.”
 Peasant 2 – “Aye, violence at the tavern I heard. Some would be hero sticking their nose in where it wasn’t wanted”
 Peasant 3 – “Saved a man’s life I heard”

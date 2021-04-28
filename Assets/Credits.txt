@@ -40,16 +40,16 @@ fire.wav - Krisboruff, https://freesound.org/people/Krisboruff/sounds/17742/
 
 192072pfranzenambient-battle-noise-swords-and-shouting - pfranzen,  https://freesound.org/people/pfranzen/sounds/192072/
 
-airball.wav -
+airball.wav - dkristian, https://freesound.org/people/dkristian/sounds/31473/
 
-fireball.wav -
+fireball.wav - JoelAudio, https://freesound.org/people/JoelAudio/sounds/77691/
 
-earthball.wav -
+earthball.wav - EminYILDIRIM, https://freesound.org/people/EminYILDIRIM/sounds/541477/
 
-waterball.wav -
+waterball.wav - ryusa, https://freesound.org/people/ryusa/sounds/531086/
 
-wagonCart.wav -
+wagonCart.wav - craigsmith, https://freesound.org/people/craigsmith/sounds/480035/
 
-tavern.wav -
+tavern.wav - ralexpdx, https://freesound.org/people/ralexpdx/sounds/321220/
 
-Drinking_with_slurp.wav - craigglenday, 
+Drinking_with_slurp.wav - craigglenday, https://freesound.org/people/craigglenday/sounds/517173/
