@@ -29,22 +29,22 @@ Welcome!
 You can change sound volume by expanding the panel on the left.
 [[Begin Story!-&gt;Act 1]]</tw-passagedata><tw-passagedata pid="2" name="Background1" tags="Intro" position="709,201" size="100,100">{
 (set: $aggression to 0)
-Fifteen years ago, a mysterious event struck these lands known as &#39;The Awakening&#39;. After this event a large part of the world&#39;s population gained access to powers that were dormant inside of them. 
-People quickly became power hungry and started wars with each other, using their new found powers to defeat anyone in their path and take over control. One person in particular, known as the Mayor has been very successful in taking lands from all of his enemies. Thanks to his power he drains other peoples&#39; powers to strengthen himself, and is using his power to slowly seize control of the whole world.
+Fifteen years ago, a mysterious event struck these lands known as (text-colour:cyan)[The Awakening]. Nothing would ever be the same.&lt;br&gt;&lt;br&gt;Mysterious elemental powers awoke within a small portion of the population, seemingly overnight. This unbalanced the already fragile political landscape and plunged the country into bloody chaos.&lt;br&gt;&lt;br&gt;
+The gift of elemental control was given to people from all walks of life and levels of society. Reports of miraculous and terrible acts spread like wildfire. Social systems, long in place, were turned on their head as traditional holders of power and influence watched their grip on the populace weaken and ultimately disappear.&lt;br&gt; From the rubble of this chaos one malevolent figure, known only as (text-colour:purple)[The Mayor] quickly rose above all... 
 }
-[[Continue-&gt;Background2]]</tw-passagedata><tw-passagedata pid="3" name="Background2" tags="Intro" position="832,199" size="100,100">As the Mayor gained more and more control, he started to capture anyone with powers. Not all people were power hungry, there is a group of people with powers that decided to hide them and try to live a simple life, including you. Everything was going fine, until one day you saw a villager about to be crushed by a tree. You decided to save him by using your powers. 
-(click-append:&quot;your powers.&quot;)[(unless: (track: &#39;fallingTree&#39;, &#39;isplaying&#39;))[(track: &#39;fallingTree&#39;, &#39;play&#39;)] While the person was grateful for saving their life, you could sense that your simple life was about to change.
-[[Continue-&gt;Background3]]]</tw-passagedata><tw-passagedata pid="4" name="Background3" tags="Intro" position="957,198" size="100,100">It wasn&#39;t going to be long before Mayor&#39;s execution squad showed up and forcefuly searched the village for the source of the power they sensed because of you. 
-You did try to warn the villagers not to stay as the squad is known to use any means they deem necessary to get what they want but they didn&#39;t want to abandon their home. You had to run, taking only the most valuable items and headed south.
-[[Continue-&gt;Background4]]</tw-passagedata><tw-passagedata pid="5" name="Background4" tags="Intro" position="1082,199" size="100,100">You kept running, but it didn&#39;t take long for the execution squad to catch up. They are formed of some of the best hunters found in these lands. 
-You were outnumbered, quickly overwhelmed you and put you in chains, they also placed a strange collar on your neck that prevented you from using your powers.
-(unless: (track: &#39;fireNoise&#39;, &#39;isplaying&#39;))[(track: &#39;fireNoise&#39;, &#39;loop&#39;, true) (track: &#39;fireNoise&#39;, &#39;play&#39;)] They dragged you through the village or at least what was left of it, everything was on fire, some of the people were in chains and others were dead in the streets. This was just another village that was used as an example of what happens to people that resist the Mayor&#39;s authority over these lands.
+[[Continue-&gt;Background1.1]]</tw-passagedata><tw-passagedata pid="3" name="Background2" tags="Intro" position="832,199" size="100,100">It is a day not unlike any other, you are walking alone on the edge of the village.&lt;br&gt;&lt;br&gt;Suddenly you hear a scream, in an instant you neck snaps back and raw elemental power springs from your being. Time seems to slow and the air is thick with energy, your senses and perception magnify.&lt;br&gt;&lt;br&gt;You sense that a young woman is about to be crushed by a tree. Completely beyond your control, as if guided by a greater power, a pure flow of elemental energy suspends the falling tree. 
+(click-append:&quot;falling tree.&quot;)[(unless: (track: &#39;fallingTree&#39;, &#39;isplaying&#39;))[(track: &#39;fallingTree&#39;, &#39;play&#39;)] &lt;br&gt;&lt;br&gt;The terrified girl quickly runs away with fear in her eyes. You couldn&#39;t tell if she was more afraid of the falling tree or of you.
+[[Continue-&gt;Background3]]]</tw-passagedata><tw-passagedata pid="4" name="Background3" tags="Intro" position="957,198" size="100,100">It wasn&#39;t going to be long before (text-colour:purple)[The Mayor&#39;s] execution squad showed up and forcefuly searched the village for the source of the power they sensed because of you.&lt;br&gt;
+You tried your best to warn the villagers to flee but they didn&#39;t want to abandon their homes and farms.&lt;br&gt; The execution squads are known for their brutality. They will do whatever they deem necessary to get what they want and what they want is you!&lt;br&gt;&lt;br&gt;You have to run, immediately. You take only what you can carry and head south.
+[[Continue-&gt;Background4]]</tw-passagedata><tw-passagedata pid="5" name="Background4" tags="Intro" position="1082,199" size="100,100">You keep running, but it doesn&#39;t take long for the execution squad to catch up. They are formed of some of the best hunters in the land. 
+You are outnumbered, quickly overwhelmed and clapped in chains. &lt;br&gt;&lt;br&gt;One of the soldiers places a strange collar around your neck, immediately you feel you spirit dampen, your powers have been rendered useless.
+(unless: (track: &#39;fireNoise&#39;, &#39;isplaying&#39;))[(track: &#39;fireNoise&#39;, &#39;loop&#39;, true) (track: &#39;fireNoise&#39;, &#39;play&#39;)] You are dragged through your village, or at least what is left of it. Everything burns, people are bruised and in chains, others lie dead in the streets. This is just another village that was used as an example of what happens to people that resist (text-colour:purple)[The Mayor&#39;s] authority over these lands.
 [[Continue-&gt;CurrentSituation]]</tw-passagedata><tw-passagedata pid="6" name="Act1 Node1 Start" tags="Act1" position="1332,203" size="100,100">{
 (track: &#39;loudNoise&#39;, &#39;play&#39;)
-You get awakened by loud noises and see guards frantically running towards where the torture chambers are located. Listen closer
+You are awakened by loud noises, by the raised voices that accompany commotion.&lt;br&gt;You are in your cell, the days and weeks and months have all become a dark and damp blur. Your body looks weak but your eyes burn with a freshly forged hatred for (text-colour:purple)[The Mayor] and all who support him.&lt;br&gt;&lt;br&gt;Suddenly you see guards frantically running towards where the torture chambers are located. Listen closer
 }
 (click-replace: &quot;Listen closer&quot;)[(unless: (track: &#39;magicExplosion&#39;, &#39;isplaying&#39;))[(track: &#39;magicExplosion&#39;, &#39;play&#39;)] You see a bright glow followed by a loud explosion sound and people screaming. 
-[[It&#39;s time to do something.-&gt;Act1 Node2]]]</tw-passagedata><tw-passagedata pid="7" name="Act1 Node2" tags="Act1" position="1328,322" size="100,100">{
+[[It&#39;s finally time to do something.-&gt;Act1 Node2]]]</tw-passagedata><tw-passagedata pid="7" name="Act1 Node2" tags="Act1" position="1328,322" size="100,100">{
 (set: $act1Node2Choice to -1)
 It seems the guards are distracted, you should be able to escape this place.
 }
@@ -71,45 +71,42 @@ The guard has his back towards you.
 {
 This is your chance for a suprise attack! 
 (click-append: &quot;suprise attack!&quot;)[(unless: (track: &#39;supriseAttackNoise&#39;, &#39;isplaying&#39;))[(track: &#39;supriseAttackNoise&#39;, &#39;play&#39;)] You knock the guard out, and proceed to [[escape the prison.-&gt;Act1 Node4]]]
-}</tw-passagedata><tw-passagedata pid="11" name="Act1 Node4" tags="Act1" position="1333,571" size="100,100">You escaped the prison but you can&#39;t just stop and celebrate. You need to find some way to remove the collar and come up with a plan to defeat the Mayor. 
-Your village has been burned down, but you remember that there is another village not too far, you heard rumors about an elder that lives in that village and has helped power users before.
+}</tw-passagedata><tw-passagedata pid="11" name="Act1 Node4" tags="Act1" position="1333,571" size="100,100">You escaped the prison but you can&#39;t just stop and celebrate. You need to find some way to remove the collar and come up with a plan to defeat (text-colour:purple)[The Mayor]. 
+Your village has been burned down, it is no more. You notice chimney smoke in the distance, another village on the horizon. &lt;br&gt;&lt;br&gt;You try to remember a conversation overheard from your cell. Something about a village not too far away. You remember hearing rumors about an Elder that lives there who is sympathetic towards elemental power users.
 [[Head to the village-&gt;Act1 Node5]]</tw-passagedata><tw-passagedata pid="12" name="Act1 Node5" tags="Act1" position="1330,697" size="100,100">You reached the village, people quickly notice the collar around your neck, giving you weird looks. You won&#39;t have much time before someone notifies the execution squad.
-Try to find the elder
-(click-replace: &quot;Try to find the elder&quot;)[You ask people about the elder, some people tell you to go away before you ruin their lives others that answer don&#39;t know anything about such elder. Suddenly someone grabs your shoulder and drags you into an alley. 
+Try to find The Elder.
+(click-replace: &quot;Try to find The Elder.&quot;)[You ask people about The Elder, some people tell you to go away before you ruin their lives others that answer don&#39;t know anything about such Elder. Suddenly someone grabs your shoulder and drags you into an alley. 
 Try to fight back]
 (click-replace: &quot;Try to fight back&quot;)[As you are about to strike, you hear the person behind you say:
 &quot;You should not be walking around with that collar of yours, it scares people. Now tell me why are you here&quot;.
-[[Answer politely, telling the man about yourself, how you escaped the prison and that you are looking for help from the elder-&gt;Act1 Node6 Friendly]]
-[[Answer politely, hiding the details about youself, how you escaped and about the elder-&gt;Act1 Node6 Neutral]]
+[[Answer politely, telling the man about yourself, how you escaped the prison and that you are looking for help from The Elder-&gt;Act1 Node6 Friendly]]
+[[Answer politely, hiding ehe details about youself, how you escaped and about The Elder-&gt;Act1 Node6 Neutral]]
 [[Answer agressively, demanding the man to let you go-&gt;Act1 Node6 Agressive]]
 ] </tw-passagedata><tw-passagedata pid="13" name="CurrentSituation" tags="" position="1205,201" size="100,100">{
 (if: (track: &#39;fireNoise&#39;, &#39;isplaying&#39;))[
     (track:&#39;fireNoise&#39;, &#39;stop&#39;)
 ]
-You ended up in one of many prisons set up by the Mayor, this one happened to be very close to your old village. The conditions are horrible and people that have been here for a some time are in terrible state, some barely hanging onto their life. 
+A dank smelling hood is placed over your head and you are cruelly marched to one of (text-colour:purple)[The Mayor&#39;s] infamous prison complexes.&lt;br&gt;&lt;br&gt;The conditions are horrible and people that have been here for a some time are in terrible state, some barely hanging onto their lives. 
 }
-You always had hatred towards the power-mad Mayor, but seeing all these people held against their will, tortured, used by the Mayor for more power, it disgusted you. Something had to be done about this.
-[[Continue-&gt;Act1 Node1 Start]]</tw-passagedata><tw-passagedata pid="14" name="Act1 Node6 Friendly" tags="" position="1183,823" size="100,100">After hearing you story, the stranger tells you that he is the elder. He tells you that he is a a power user that has hid for many years now and tries to help people in need, and removes your collar. He also admires your intent to fight back for the people. 
-&quot;The Mayor is growing in power with each day, soon enough no one will be able to stop him. He sends his execution squads on these witch hunts to gather up the rest of the power users.&quot; The Elder explains.
-&quot;But I think you might have the fighting spirit and with the right training the power to challenge him. I&#39;ll give you a minute to rest, then we will discuss how you can gain power to challenge the mayor.&quot;.
-[[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="15" name="Act1 Node6 Neutral" tags="" position="1332,822" size="100,100">After hearing you story, the stranger tells you that he thinks you are hiding something but he understands as he is the elder. He tells you that he is a a power user that has hid for many years now and tries to help people in need, and removes your collar. He also admires your intent to fight back for the people. 
-&quot;The Mayor is growing in power with each day, soon enough no one will be able to stop him. He sends his execution squads on these witch hunts to gather up the rest of the power users.&quot; The Elder explains.
-&quot;But I think you might have the fighting spirit and with the right training the power to challenge him. I&#39;ll give you a minute to rest, then we will discuss how you can gain power to challenge the mayor.&quot;.
+You always had hatred towards the power-mad (text-colour:purple)[Mayor], but seeing all these people held against their will, tortured, used for more power disgusts you. Something is stirring within you.
+[[Continue-&gt;Act1 Node1 Start]]</tw-passagedata><tw-passagedata pid="14" name="Act1 Node6 Friendly" tags="" position="1183,823" size="100,100">After hearing you story, the stranger tells you that he is The Elder. He tells you that he is a a power user that has hid for many years now and tries to help people in need. He removes your collar and you feel the familiar thrill of elemenal power flow to your fingertips. He also admires your intent to fight back for the people.&lt;br&gt; 
+&quot;(text-colour:purple)[The Mayor] is growing in power with each day, soon enough no one will be able to stop him. He sends his execution squads on these witch hunts to gather up the rest of the power users.&quot;The Elder explains.
+&quot;But I think you might have the fighting spirit and with the right training the power to challenge him. I&#39;ll give you a minute to rest, then we will discuss how you can gain the power you will need.&quot;.
+[[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="15" name="Act1 Node6 Neutral" tags="" position="1332,822" size="100,100">After hearing you story, the stranger tells you that he thinks you are hiding something but he understands as he is The Elder. He tells you that he is a a power user that has hid for many years now and tries to help people in need.  He removes your collar and you feel the familiar thrill of elemenal power flow to your fingertips. He also admires your intent to fight back for the people.&lt;br&gt; 
+&quot;(text-colour:purple)[The Mayor] is growing in power with each day, soon enough no one will be able to stop him. He sends his execution squads on these witch hunts to gather up the rest of the power users.&quot; The Elder explains.
+&quot;But I think you might have the fighting spirit and with the right training the power to challenge him. I&#39;ll give you a minute to rest, then we will discuss how you can gain the power you will need.&quot;.
 [[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="16" name="Act1 Node6 Agressive" tags="" position="1482,823" size="100,100">{
 (set: $aggression to $aggression + 1)
-The stranger tells you to calm down, telling you that he heard you asking about the elder and explains that he is the elder. He will remove your collar as he understands your situation. You thank him and explain that you want revenge on the mayor.
+The stranger tells you to calm down, telling you that he heard you asking about The Elder and explains that you are not talking to him. He will remove your collar as he understands your situation. You thank him and explain that you want revenge on (text-colour:purple)[The Mayor].
 }
-&quot;The Mayor is growing in power with each day, soon enough no one will be able to stop him. He sends his execution squads on these witch hunts to gather up the rest of the power users.&quot; The Elder explains.
-&quot;But I think you might have the fighting spirit and with the right training the power to challenge him. I&#39;ll give you a minute to rest, then we will discuss how you can gain power to challenge the mayor.&quot;.
+&quot;He is growing in power with each day, soon enough no one will be able to stop him. He sends his execution squads on these witch hunts to gather up the rest of the power users.&quot; The Elder explains.
+&quot;But I think you might have the fighting spirit and with the right training the power to challenge him. I&#39;ll give you a minute to rest, then we will discuss how you can gain the power you will need.&quot;.
 [[Enough resting, time to act.-&gt;Act1 Final Node]] </tw-passagedata><tw-passagedata pid="17" name="Act1 Final Node" tags="" position="1335,948" size="100,100">{
 (set: $firstMaster to -1)
 (set: $secondMaster to -1)
-The elder tells you about four masters that are able to train you in how to effectively use your power. He also reminds you that that the Mayor is growing in power and time is running out. You must seek out a master as quickly as possible.
+The Elder tells you about four masters that are able to train you in how to effectively use your power. He also reminds you that that (text-colour:purple)[The Mayor] is growing in power and time is running out. You must seek out a master as quickly as possible.
 }
-[[Look at the map and set off on your journey-&gt;Act 2]]</tw-passagedata><tw-passagedata pid="18" name="Act2 The Map" tags="" position="1340,1217" size="100,100">Player comes back here when they have to decide which master to go to, i.e. from act 1 and also when u finish training with one of the masters u will come back here.
-Make sure to set the &#39;$firstMaster&#39; and &#39;$secondMaster&#39; when player goes for training i.e. u can use an if statemtn to check if &#39;$firstMaster&#39; is -1 if yes then set that master to the choice made by the player else set &#39;$secondMaster&#39; to the choice, if both are set then we proceed with the story(unless there are changes done where the player can visit more than 2 masters)
-
-Its been 5 days since I set off from the Elder. I must keep going, I must defeat the Mayor.
+[[Look at the map and set off on your journey-&gt;Act 2]]</tw-passagedata><tw-passagedata pid="18" name="Act2 The Map" tags="" position="1340,1217" size="100,100">Its been 5 days since I set off from the Elder. I must keep going, I must defeat the Mayor.
 The crossroads for the masters is approaching, which path will guide me to learn about my true potential.
 
 [[Train in the way of the flame.-&gt;Fire Training]]
@@ -118,7 +115,10 @@ The crossroads for the masters is approaching, which path will guide me to learn
 [[Train in the sky, controlling the currents around you.-&gt;Air Training]]
 
 
-(set: $ability to &quot;NaN&quot;)</tw-passagedata><tw-passagedata pid="19" name="hal.tracks" tags="" position="803,39" size="100,100">mainMusic: ./Assets/Audio/Music/mysteriousPiano.mp3
+(set: $ability to &quot;NaN&quot;)
+
+&lt;!--Player comes back here when they have to decide which master to go to, i.e. from act 1 and also when u finish training with one of the masters u will come back here.
+Make sure to set the &#39;$firstMaster&#39; and &#39;$secondMaster&#39; when player goes for training i.e. u can use an if statemtn to check if &#39;$firstMaster&#39; is -1 if yes then set that master to the choice made by the player else set &#39;$secondMaster&#39; to the choice, if both are set then we proceed with the story(unless there are changes done where the player can visit more than 2 masters)--&gt;</tw-passagedata><tw-passagedata pid="19" name="hal.tracks" tags="" position="803,39" size="100,100">mainMusic: ./Assets/Audio/Music/mysteriousPiano.mp3
 musicTwo: ./Assets/Audio/Music/mysteriousBackgroundOrchestra.mp3
 musicThree: ./Assets/Audio/Music/mysteriousEvent.mp3
 musicFour: ./Assets/Audio/Music/mysteryOfDarkForest.mp3
@@ -336,78 +336,72 @@ You feel wiery as you get up and walk out the door
 =&gt;&lt;=</tw-passagedata><tw-passagedata pid="38" name="Listen to locals" tags="" position="1550,1848" size="100,100">{
 (if: $random&#39;s length is 0)[
 	There are no more choices left!
-	It&#39;s getting late, its time to leave.
+	It&#39;s getting late, its time to leave. As you exit the tavern you think you spot a gold piece on the ground infront of a well.&lt;br&gt;You stoop to pick it up.&lt;br&gt;You lose your balance and topple headfirst into the well.&lt;br&gt;&lt;br&gt;Great!&lt;br&gt;&lt;br&gt;There&#39;s a passage down here, its your only way out so you step into it and begin walking.&lt;br&gt;&lt;br&gt;
 	(set: $choice to -1)
-	(link: &quot;Secret Message&quot;)[(goto: &quot;Secret pathway discovered&quot;)]
+	(link: &quot;Continue&quot;)[(goto: &quot;Secret pathway discovered&quot;)]
 	
 ]
 (else:)[
 (set: $choice to (either: ...$random))
 ]
 (if: $choice is 1)[
-Peasant 1 - “Lots more patrols around lately eh?. Reckon its summat to do wiv the commotion over at the prison camp a while back.&quot;
+(text-colour:lime)[Peasant:] “Lots more patrols around lately eh?. Reckon its summat to do wiv the commotion over at the prison camp a while back.&quot;&lt;br&gt;&lt;br&gt;
+(text-colour:yellow)[Other Peasant:] “Aye, I reckon so. Tell ya what, I wouldn’t want no execution squad chasing after me. A damned scary prospect that.&lt;br&gt;&lt;br&gt;
 
-Peasant 2 – “Aye, I reckon so. Tell ya what, I wouldn’t want no execution squad chasing after me. A damned scary prospect that.
-
-Peasant 1 – “Days gone by you’d never’ve seen the likes of them this far form the capital, summat definitely has them spooked...”
+(text-colour:lime)[Peasant:] “Days gone by you’d never’ve seen the likes of them this far form the capital, summat definitely has them spooked...”&lt;br&gt;
 
 (set: $random to it - (a: 1))
 ]
 
 (elseif: $choice is 2)[
-Merchant 1 – “Lots of folk on the roads today. My convoy was stuck behind the largest wagon full of turnips I’ve ever seen. The poor ass hauling it looked mere moments from death. The whole thing was just dreadfully inconvenient and has ruined my schedule!’
-
-Merchant 2 – “Do go on…”
+(text-colour:red)[Merchant:] “Lots of folk on the roads today. My convoy was stuck behind the largest wagon full of turnips I’ve ever seen. The poor ass hauling it looked mere moments from death. The whole thing was just dreadfully inconvenient and has ruined my schedule!’&lt;br&gt;&lt;br&gt;
+(text-colour:orange)[Other Merchant:] “Do go on…”&lt;br&gt;
 
 (set: $random to it - (a: 2))
 ]
 (elseif: $choice is 3)[
-Retired Soldier 1 – “…the things I’ve had to do in the name of “duty”, there’s blood on these hands”
-
-Retired Soldier 2 – “Aye, and on these an’ all”
-
-Retired Soldier 1 – “I am dead inside, what I’ve witnessed, what I’ve done in service of The Mayor. It stays with you ya know?”
-
-Retired Soldier 2 – “Aye, it truly does, it truly does.”
-
-Retired Soldier 1 – “And for what? To be cast aside, discarded after years of service. Returned to the miserable society that you helped tear apart…”
+(text-colour:blue)[Retired Soldier:] “…the things I’ve had to do in the name of “duty”, there’s blood on these hands”&lt;br&gt;&lt;br&gt;
+(text-colour:green)[Other Retired Soldier:] “Aye, and on these an’ all”&lt;br&gt;&lt;br&gt;
+(text-colour:blue)[Retired Soldier:] “I am dead inside, what I’ve witnessed, what I’ve done in service of The Mayor. It stays with you ya know?”&lt;br&gt;&lt;br&gt;
+(text-colour:green)[Other Retired Soldier:] “Aye, it truly does, it truly does.”&lt;br&gt;&lt;br&gt;
+(text-colour:blue)[Retired Soldier:] “And for what? To be cast aside, discarded after years of service. Returned to the miserable society that you helped tear apart…”&lt;br&gt;
 
 (set: $random to it - (a: 3))
 ]
 (elseif: $choice is 4)[
-Peasant 3 – “Its tomorrow aye, my little one is turning 10. Her birthday is always bittersweet for me”
+(text-colour:magenta)[Peasant Woman:]“Its tomorrow aye, my little one is turning 10. Her birthday is always bittersweet for me”&lt;br&gt;&lt;br&gt;
 
-Peasant 4 – “You’ll be alright dear”
+(text-colour:cyan)[Other Peasant Woman:] “You’ll be alright dear”&lt;br&gt;&lt;br&gt;
 
-Peasant 3 (sobbing) – “I just wish I could get him back, she doesn’t even remember she has a father.”
+(text-colour:magenta)[Peasant Woman:] (sobbing)“I just wish I could get him back, she doesn’t even remember she has a father.”&lt;br&gt;&lt;br&gt;
 
-Peasant 4 – “Those bastards have a lot to answer for”
+(text-colour:cyan)[Other Peasant Woman:] “Those bastards have a lot to answer for”&lt;br&gt;
 
 (set: $random to it - (a: 4))
 ]
 (elseif: $choice is 5)[
-Merchant – “Where you bound for friend?”
+(text-colour:yellow)[Merchant:] “Where you bound for friend?”&lt;br&gt;&lt;br&gt;
 
-Other Merchant – “Headed for the capital”
+(text-colour:orange)[Other Merchant:] “Headed for the capital”&lt;br&gt;&lt;br&gt;
 
-Merchant – “You be careful on those road now you hear. Precious cargo such as yours. Plenty of those’d not think twice about gutting ya for’t”
+(text-colour:yellow)[Merchant:] “You be careful on those road now you hear. Precious cargo such as yours. Plenty of those’d not think twice about gutting ya for’t”&lt;br&gt;&lt;br&gt;
 
-Other Merchant – “Oh don’t worry, I have an attaché of guards. They are under the strictest of instructions to stay with the wagons. The strictest, I assure you.”
+(text-colour:orange)[Other Merchant:] “Oh don’t worry, I have an attaché of guards. They are under the strictest of instructions to stay with the wagons. The strictest, I assure you.”&lt;br&gt;
 
 (set: $random to it - (a: 5))
 ]
 (elseif: $choice is 6)[
-Farmer – “There’s nowt will grow in these parts this year. Field after field of dead and dying crops”
+(text-colour:green)[Farmer:] “There’s nowt will grow in these parts this year. Field after field of dead and dying crops”&lt;br&gt;&lt;br&gt;
 
-Other Farmer – “There’ll be trouble over this yet”
+(text-colour:blue)[Other Farmer:] “There’ll be trouble over this yet”&lt;br&gt;&lt;br&gt;
 
-Farmer – “I’ve ‘eard it’s the doin of those brave lunatics ‘ave banded together recently…what’re they calling themselves again?”
+(text-colour:green)[Farmer:] “I’ve ‘eard it’s the doin of those brave lunatics ‘ave banded together recently…what’re they calling themselves again?”&lt;br&gt;&lt;br&gt;
 
-Other Farmer – “I don’t remember, but they’ll not be making too many friends in these parts with stunts like these.”
+(text-colour:blue)[Other Farmer:] “I don’t remember, but they’ll not be making too many friends in these parts with stunts like these.”&lt;br&gt;&lt;br&gt;
 
-Farmer – “If they’re trying to provoke The Mayor they’re on the right track.”
+(text-colour:green)[Farmer:] “If they’re trying to provoke (text-colour:purple)[The Mayor] they’re on the right track.”&lt;br&gt;&lt;br&gt;
 
-Other Farmer – “Aye, and we’re the poor sods that’ll pay the price for it.”
+(text-colour:blue)[Other Farmer:] “Aye, and we’re the poor sods that’ll pay the price for it.”&lt;br&gt;
 
 (set: $random to it - (a: 6))
 ]
@@ -422,16 +416,13 @@ Other Farmer – “Aye, and we’re the poor sods that’ll pay the price for i
 [[Leave-&gt;Path outside Tavern]]
 (if: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[
     (track:&#39;tavern&#39;, &#39;stop&#39;)
-]</tw-passagedata><tw-passagedata pid="39" name="Back to Tavern" tags="" position="1354,2177" size="100,100">After the battle withe these soldiers, our hero is shocked to discover that the pesants and tavern customers are not happy with him. He naively presumed that they would be happy and view him as a hero but instead they are quite pissed off as he has just created a world of trouble for them. The travellers that he &quot;rescued&quot; are also not happy, they know that there will be more soldiers at the tavern soon as a result of the murders. Our hero is taken aback by this development, he is starting to learn that the world is a cruel place full of cowards and bullies.
+]</tw-passagedata><tw-passagedata pid="39" name="Back to Tavern" tags="" position="1354,2177" size="100,100">After the battle with these soldiers, you are shocked to discover that the pesants and tavern customers are not pleased. &lt;br&gt;&lt;br&gt;You naively presumed that they would be happy and view you as a hero but instead they are quite pissed off as you just created a world of trouble for them. The travellers that you &quot;rescued&quot; are also not happy, they know that there will be more soldiers at the tavern soon as a result of the murders. &lt;br&gt;&lt;br&gt;You are taken aback by this development, you are starting to learn that the world is a cruel place full of cowards and bullies.
 
-[[Head towards the city-&gt;Head towards city]]</tw-passagedata><tw-passagedata pid="40" name="Secret pathway discovered" tags="" position="1721,1987" size="100,100">You learn about this from the dialogue from the locals.
-Sewage? 
-Rat infested? 
-Maybe that&#39;s why no guards are guarding it
+[[Head towards the city-&gt;Head towards city]]</tw-passagedata><tw-passagedata pid="40" name="Secret pathway discovered" tags="" position="1721,1987" size="100,100">This underground passage seems to have gone on for days. You were not prepared for this length of a journey!&lt;br&gt;You would have died of thirst if it were not for the moist drippings running down the walls on either side of you.&lt;br&gt;&lt;br&gt;It is completely dark down here, you are blind but thankful that the passage has run in a straight line.&lt;br&gt;&lt;br&gt;You notice the unmistakable orange glow of torchlight, a pinprick in the inky blackness in front of you.&lt;br&gt;An exit, but just where will you come out?
 
-Secret entrance to the castle
+It looks like I am in a castle of some sort...how convenient.
 
-[[Take path to the castle-&gt;Confront General]]</tw-passagedata><tw-passagedata pid="41" name="Head towards city" tags="" position="1349,2321" size="100,100">=&gt;&lt;=
+[[Proceed-&gt;Confront General]]</tw-passagedata><tw-passagedata pid="41" name="Head towards city" tags="" position="1349,2321" size="100,100">=&gt;&lt;=
 You follow the road towards the city gates
 (live: 3s)[(goto: &quot;Arrival at city gates&quot;)]</tw-passagedata><tw-passagedata pid="42" name="Arrival at city gates" tags="" position="1351,2450" size="100,100">{(set: $marketKnowledge to -1)
 (set: $peasantKnowledge to -1)
@@ -522,33 +513,33 @@ Your drink value is $drink.
 	
 ]
 (set: $aggression to 5)</tw-passagedata><tw-passagedata pid="47" name="listen" tags="" position="1592,2684" size="100,100">(if: $listen is 1)[
-Peasant 1 – “Reports of some commotion out the road this week.”
-Peasant 2 – “Aye, violence at the tavern I heard. Some would be hero sticking their nose in where it wasn’t wanted”
-Peasant 3 – “Saved a man’s life I heard”
-Peasant 2 – “Stayed his execution more like. You don’t think them bastardin’ soldiers will take this lying down?”
-Peasant 3 – “Aye, but it’s about time someone bloodied their nose for once. The shoe was on the other foot for a moment and people are taking about it.”
-Peasant 2 – “That kind of talk is likely to get you strung up…or worse…”
-Peasant 1 – “Alright you two, pack it in. Next round’s on me.”
+(text-colour:yellow)[Peasant 1:] “Reports of some commotion out the road this week.”&lt;br&gt;
+(text-colour:orange)[Peasant 2:] “Aye, violence at the tavern I heard. Some would be hero sticking their nose in where it wasn’t wanted”&lt;br&gt;
+(text-colour:red)[Peasant 3:] “Saved a man’s life I heard”&lt;br&gt;
+(text-colour:orange)[Peasant 2:] “Stayed his execution more like. You don’t think them bastardin’ soldiers will take this lying down?”&lt;br&gt;
+(text-colour:red)[Peasant 3:] “Aye, but it’s about time someone bloodied their nose for once. The shoe was on the other foot for a moment and people are taking about it.”&lt;br&gt;
+(text-colour:orange)[Peasant 2:] “That kind of talk is likely to get you strung up…or worse…”&lt;br&gt;
+(text-colour:yellow)[Peasant 1:] “Alright you two, pack it in. Next round’s on me.”&lt;br&gt;
 (set: $peasantKnowledge to 1)
 [[Market-&gt;Market]] 
 [[Castle-&gt;Castle]]
 ]
 (if: $listen is 2)[
-Merchant – “I must finish this cup of wine quickly, business to take care of and all that.”
-Other Merchant -  “If you could call this horse piss wine! Where are you of too?”
-Merchant – “Turnips my boy, I have a wagon piled high with them. Worth their weight in gold in these times. I’m scheduled to drop them inside the castle gates this afternoon. You know they’re sticklers for security in that place so I don’t want to miss my gate slot.”
-Other Merchant – “Aye, good luck to you then…”	
+(text-colour:magenta)[Merchant:] “I must finish this cup of wine quickly, business to take care of and all that.”&lt;br&gt;
+(text-colour:cyan)[Other Merchant:] “If you could call this horse piss wine! Where are you of too?”&lt;br&gt;
+(text-colour:magenta)[Merchant:] “Turnips my boy, I have a wagon piled high with them. Worth their weight in gold in these times. I’m scheduled to drop them inside the castle gates this afternoon. You know they’re sticklers for security in that place so I don’t want to miss my gate &lt;br&gt;
+(text-colour:cyan)[Other Merchant:] “Aye, good luck to you then…”&lt;br&gt;	
 (set: $marketKnowledge to 1)
 [[Market-&gt;Market]] 
 [[Castle-&gt;Castle]]
 ]
 (if: $listen is 3)[
-Soldier – “We should come here before our shift more often mate”
-Other Soldier – “Aye, really takes the edge off the prospect of a 10 hour stint in full bloody armour”
-Soldier – “It’s not like anyone will be able to tell I’m drunk cooped up in that tin can. I’ll pop down me face visor and tune out.”
-Other Soldier – “Right, finish up, Sergeant’ll get his knickers in a twist if we don’t hop too”
-Soldier – “Need to change into me gear, I’m gonna head into the back room here and get ‘er done. See you at the gates mate”
-Other Soldier – “Don’t be late!”
+(text-colour:green)[Soldier:] “We should come here before our shift more often mate”&lt;br&gt;
+(text-colour:lime)[Other Soldier:] “Aye, really takes the edge off the prospect of a 10 hour stint in full bloody armour”&lt;br&gt;
+(text-colour:green)[Soldier:] “It’s not like anyone will be able to tell I’m drunk cooped up in that tin can. I’ll pop down me face visor and tune out.”&lt;br&gt;
+(text-colour:lime)[Other Soldier:] “Right, finish up, Sergeant’ll get his knickers in a twist if we don’t hop too”&lt;br&gt;
+(text-colour:green)[Soldier:] “Need to change into me gear, I’m gonna head into the back room here and get ‘er done. See you at the gates mate”&lt;br&gt;
+(text-colour:lime)[Other Soldier:] “Don’t be late!”&lt;br&gt;
 Follow the soldier to a bathroom stall.
 (set: $soldierKnowledge to 1)
 (click-replace: &quot;Follow the soldier to a bathroom stall.&quot;)[
@@ -679,7 +670,10 @@ Continue.]
 At least not yet...
 [[Game Completed-&gt;Completed Game]]]
 
-</tw-passagedata><tw-passagedata pid="55" name="Completed Game" tags="" position="1294,4079" size="100,100">Thank you for finishing the game! Stay tuned for the next instalment of the search for revenge of our protagonist.</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="55" name="Completed Game" tags="" position="1294,4079" size="100,100">Thank you for finishing the game! Stay tuned for the next instalment of the search for revenge of our protagonist.</tw-passagedata><tw-passagedata pid="56" name="Background1.1" tags="" position="709,351" size="100,100">Little is known about (text-colour:purple)[The Mayor]. Some say that he was in a position of influence before (text-colour:cyan)[The Awakening] and that he quickly used his newly acquired elemental abilities to eliminate any political rivals. What is known for certain is that over the last decade he has successfully consolidated power for himself and his associates.&lt;br&gt;&lt;br&gt;As the defacto head of government he has control of all state finances and systems. This gives his organisation immense power and logistical capability. (text-colour:purple)[The Mayor] made it his purpose to identify and imprison any power users that revealed themselves across the land. Captured Elementals are confined to bleak and expansive prison colonies where their powers are stifled and all sorts of grizzly experiments are carried out.
+[[Continue-&gt;Background1.3]]</tw-passagedata><tw-passagedata pid="57" name="Background1.3" tags="" position="759,487" size="100,100">Fifteen years have passed since The Awakening, (text-colour:purple)[The Mayor] is the head of a brutal faction of soldiers and mercenaries responsible for long years of bloodshed and terror.&lt;br&gt;&lt;br&gt;Elementals have learned to guard knowledge of their abilities closely. To reveal one&#39;s power was to condemn oneself to persecution and imprisonment. Any display of elemental power is treated with fear and suspicion.&lt;br&gt;&lt;br&gt;Across the land Elementals are treated as outcasts, the shadow of violence following them wherever they go...
+[[Continue-&gt;Background1.4]]</tw-passagedata><tw-passagedata pid="58" name="Background1.4" tags="" position="828,352" size="100,100">You have always enjoyed the quiet. Days spent alone working the fields on the edge of the village suit you just fine. You enjoy your own company and have always felt somewhat apart from the rest of the village.&lt;br&gt;&lt;br&gt;You were not much older than a child on the night of (text-colour:cyan)[The Awakening], your memories of that time are filled with deep pain and sorrow. It feels like you have been on your own your entire life.
+[[Continue-&gt;Background2]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
