@@ -15,3 +15,11 @@ Keep track of all variables here, helps to know what the game keeps track of and
 
 ## Credits for assets
 All Credits are in Assets/Credits.txt
+
+# Authors
+GROUP05:
+Damian Skrzypek – 17217679
+Pawel Ostach - 17214211
+Eoghan Russell – 17202124
+Darragh Kelly – 17235545
+Ronan McMullen – 0451657

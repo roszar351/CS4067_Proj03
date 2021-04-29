@@ -24,10 +24,19 @@
 /** End of HAL code */</script><tw-passagedata pid="1" name="The Start Node!" tags="Intro" position="445,203" size="100,100">{
 (track: &#39;mainMusic&#39;, &#39;loop&#39;, true)
 (track: &#39;mainMusic&#39;, &#39;playwhenpossible&#39;)
-Welcome!
+&#39;&#39;Welcome!&#39;&#39;
 }
 You can change sound volume by expanding the panel on the left.
-[[Begin Story!-&gt;Act 1]]</tw-passagedata><tw-passagedata pid="2" name="Background1" tags="Intro" position="709,201" size="100,100">{
+
+&#39;&#39;Authors:&#39;&#39;
+//Group05//
+Damian Skrzypek – 17217679
+Pawel Ostach - 17214211
+Eoghan Russell – 17202124
+Darragh Kelly – 17235545
+Ronan McMullen – 0451657
+
+[[Begin Story!-&gt;Act 1]]</tw-passagedata><tw-passagedata pid="2" name="Background1" tags="Intro" position="709,200" size="100,100">{
 (set: $aggression to 0)
 Fifteen years ago, a mysterious event struck these lands known as (text-colour:cyan)[The Awakening]. Nothing would ever be the same.&lt;br&gt;&lt;br&gt;Mysterious elemental powers awoke within a small portion of the population, seemingly overnight. This unbalanced the already fragile political landscape and plunged the country into bloody chaos.&lt;br&gt;&lt;br&gt;
 The gift of elemental control was given to people from all walks of life and levels of society. Reports of miraculous and terrible acts spread like wildfire. Social systems, long in place, were turned on their head as traditional holders of power and influence watched their grip on the populace weaken and ultimately disappear.&lt;br&gt; From the rubble of this chaos one malevolent figure, known only as (text-colour:purple)[The Mayor] quickly rose above all... 
@@ -272,22 +281,23 @@ Set off on your journey to find the next master. Where to go?
 [[Water Master -&gt; tavern on the way]]
 [[Earth Master -&gt; tavern on the way]]
 [[Fire Master -&gt; tavern on the way]]
-]</tw-passagedata><tw-passagedata pid="35" name="Drinking" tags="" position="1151,1862" size="100,100">(unless: (track: &#39;Drinking_with_slurp&#39;, &#39;isplaying&#39;))[(track: &#39;Drinking_with_slurp&#39;, &#39;play&#39;)]
+]</tw-passagedata><tw-passagedata pid="35" name="Drinking" tags="" position="1151,1862" size="100,100">You take a sip from your beer. You enjoy how cold it is.
+You start to look around, what shall you do next?
+Your drink value is $drink.
+(link: &quot;Drink&quot;)[
+    (set: $drink to it + 1)
+    (go-to: &quot;Drinking&quot;)
+]
+[[Leave-&gt;Path outside Tavern]]
+(unless: (track: &#39;Drinking_with_slurp&#39;, &#39;isplaying&#39;))[(track: &#39;Drinking_with_slurp&#39;, &#39;play&#39;)]
 (if: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[
     (track:&#39;tavern&#39;, &#39;stop&#39;)
 ]
-(link: &quot;Drink&quot;)[
-	(set: $drink to it + 1)
-	(go-to: &quot;Drinking&quot;)
-]
-
-Your drink value is $drink.
 
 (if: $drink is 5)[
-	(goto: &quot;T&quot;)
-	(set: $aggression to 5)
-]
-[[Leave-&gt;Path outside Tavern]]</tw-passagedata><tw-passagedata pid="36" name="Path outside Tavern" tags="" position="1422,2023" size="100,100">Walking down the street, you see soldiers beating up a peasant.
+    (goto: &quot;T&quot;)
+    (set: $aggression to 5)
+]</tw-passagedata><tw-passagedata pid="36" name="Path outside Tavern" tags="" position="1422,2023" size="100,100">Walking down the street, you see soldiers beating up a peasant.
 (if: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[
     (track:&#39;tavern&#39;, &#39;stop&#39;)
 ]
@@ -433,7 +443,7 @@ Where shall you head first?
 }
 [[Head to the Market-&gt;Market]]
 [[Head towards the castle-&gt;Castle]]
-[[Head into a local Tavern-&gt;Tavern]]</tw-passagedata><tw-passagedata pid="43" name="Market" tags="" position="1088,2688" size="100,100">(if: $marketKnowledge is 1)[
+[[Head into a local Tavern-&gt;Tavern]]</tw-passagedata><tw-passagedata pid="43" name="Market" tags="" position="1088,2688" size="100,100">{(if: $marketKnowledge is 1)[
 You see a cart, unmanned. 
 You jump into the cart, getting under the covers.
 Continue.
@@ -445,21 +455,22 @@ You are now on the way to the castle.
 ]
 ]
 (else:)[
-the market seems empty. There&#39;s nothing to do here.
-Maybe you should investigate the local tavern.
-[[Go to Tavern-&gt;Tavern]]
+The market seems empty. There&#39;s nothing to do here.
+Maybe you should investigate the local tavern. &lt;br&gt;
+[[Go to Tavern-&gt;Tavern]] &lt;br&gt;
 [[Go to Castle-&gt;Castle]]
-]</tw-passagedata><tw-passagedata pid="44" name="Castle" tags="" position="1292,2783" size="100,100">{(if: $peasantKnowledge is 1)[
+]
+}</tw-passagedata><tw-passagedata pid="44" name="Castle" tags="" position="1292,2783" size="100,100">{(if: $peasantKnowledge is 1)[
 You are full of confidence and decide to charge the guards at the gate!
 Attack!
-	(click-replace: &quot;Attack!&quot;)[
-	You throw an $ability straight at the guards!
-	In an attempt to dodge the attack, they jumped in the same direction and their heads collided knocking them both unconscious!
-	
-	You giggle at their stupidty and decide to continue on into the castle.
-	
-	[[Continue-&gt;Act 3]]
-	]
+    (click-replace: &quot;Attack!&quot;)[
+    You throw an $ability straight at the guards!
+    In an attempt to dodge the attack, they jumped in the same direction and their heads collided knocking them both unconscious!
+    
+    You giggle at their stupidty and decide to continue on into the castle.
+    
+    [[Continue-&gt;Act 3]]
+    ]
 ]
 
 (elseif: $soldierKnowledge is 1)[
@@ -467,16 +478,17 @@ You come up to the gates of the castle, you see a group of soldiers gathering ou
 You quickly join their ranks in the soldiers uniform you acquired earlier.
 [[Go with the patrol inside the castle.-&gt;Act 3]]
 ]
-}
+
 (else: )[
 
 There are guards on duty at the gate.
 You don&#39;t want to approach them without a plan of action.
 Maybe you should fall back for now.
-
-[[Go to Tavern-&gt;Tavern]]
+&lt;br&gt;
+[[Go to Tavern-&gt;Tavern]] &lt;br&gt;
 [[Go to Market-&gt;Market]]
-]</tw-passagedata><tw-passagedata pid="45" name="Tavern" tags="" position="1549,2519" size="100,100">{
+]
+}</tw-passagedata><tw-passagedata pid="45" name="Tavern" tags="" position="1549,2519" size="100,100">{
 (set: $listen to -1)
 You enter the tavern and take a seat. This Tavern is a lot busier than the last, you keep your hood up as to not draw too much attention.
 You order a drink and sit down in the corner.
@@ -500,19 +512,40 @@ You order a drink and sit down in the corner.
 ]
 [[Castle-&gt;Castle]]
 [[Market-&gt;Market]]
-</tw-passagedata><tw-passagedata pid="46" name="Drinking2" tags="" position="1098,2488" size="100,100">(unless: (track: &#39;Drinking_with_slurp&#39;, &#39;isplaying&#39;))[(track: &#39;Drinking_with_slurp&#39;, &#39;play&#39;)]
-(link: &quot;Drink&quot;)[
-	(set: $drink to it + 1)
-	(go-to: &quot;Drinking2&quot;)
-]
-
+</tw-passagedata><tw-passagedata pid="46" name="Drinking2" tags="" position="1098,2488" size="100,100">You take a sip from your beer. You enjoy how cold it is.
+You start to look around, what shall you do next?
 Your drink value is $drink.
 
-(if: $drink is 5)[
-	(goto: &quot;Tavern&quot;)
-	
+{(if: $drink &lt; 5)[
+(link: &quot;Drink&quot;)[
+    (set: $drink to it + 1)
+    (go-to: &quot;Drinking2&quot;)
+]]
+(else:)[
+No more drinking! You might not be able to stay awake!
+]}
+(link: &quot;Listen to Peasants&quot;)[
+    (set: $listen to 1)
+    (go-to: &quot;listen&quot;)
 ]
-(set: $aggression to 5)</tw-passagedata><tw-passagedata pid="47" name="listen" tags="" position="1592,2684" size="100,100">(if: $listen is 1)[
+(link: &quot;Listen to Merchants&quot;)[
+    (set: $listen to 2)
+    (go-to: &quot;listen&quot;)
+]
+(link: &quot;Listen to Soldiers&quot;)[
+    (set: $listen to 3)
+    (go-to: &quot;listen&quot;)
+]
+[[Castle-&gt;Castle]]
+[[Market-&gt;Market]]
+
+(unless: (track: &#39;Drinking_with_slurp&#39;, &#39;isplaying&#39;))[(track: &#39;Drinking_with_slurp&#39;, &#39;play&#39;)]
+(if: (track: &#39;tavern&#39;, &#39;isplaying&#39;))[
+    (track:&#39;tavern&#39;, &#39;stop&#39;)
+]
+(if: $drink is 5)[
+    (set: $aggression to 5)
+]</tw-passagedata><tw-passagedata pid="47" name="listen" tags="" position="1592,2684" size="100,100">(if: $listen is 1)[
 (text-colour:yellow)[Peasant 1:] “Reports of some commotion out the road this week.”&lt;br&gt;
 (text-colour:orange)[Peasant 2:] “Aye, violence at the tavern I heard. Some would be hero sticking their nose in where it wasn’t wanted”&lt;br&gt;
 (text-colour:red)[Peasant 3:] “Saved a man’s life I heard”&lt;br&gt;
